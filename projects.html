@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.0.0/css/font-awesome.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<style>
+  body {
+    font-family: Quicksand, sans-serif;
+    text-align: left;
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 12px;
+    border: 2px solid #dadce0;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    padding: 24px;
+    padding-top: 22px;
+    position: relative;
+  }
+
+  #heading-container {
+    padding: 10px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  #grid-container {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: 33% 33% 33%;
+    background-color: transparent;
+    padding: 10px;
+  }
+
+  #grid-item {
+    background-color: transparent;
+    border-radius: 8px;
+    border: 2px solid #dadce0;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  #icon-container {
+    width: 20%;
+    float: left;
+    background-color: #dadce0;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 65px;
+    text-align: center;
+  }
+
+  #project-description {}
+
+  #project-status-active {
+    background-color: orange;
+    border: none;
+    border-radius: 8px;
+    width: 100px;
+    color: white;
+    text-decoration: none;
+    padding: 5px 5px 5px 5px;
+    font-size: 16px;
+    cursor: default;
+    outline: none;
+  }
+
+  #project-status-active:after {
+    content: 'Active';
+  }
+
+  #project-status-complete {
+    background-color: green;
+    border: none;
+    border-radius: 8px;
+    width: 100px;
+    color: white;
+    text-decoration: none;
+    padding: 5px 5px 5px 5px;
+    font-size: 16px;
+    cursor: default;
+    outline: none;
+  }
+
+  #project-status-complete:after {
+    content: 'Complete';
+  }
+
+  #project-status-attn {
+    background-color: red;
+    border: none;
+    border-radius: 8px;
+    width: 100px;
+    color: white;
+    text-decoration: none;
+    padding: 5px 5px 5px 5px;
+    font-size: 16px;
+    cursor: default;
+    outline: none;
+  }
+
+  #project-status-attn:after {
+    content: 'Attention';
+  }
+</style>
+
+<body>
+  <div id="heading-container">
+    <h2>Projects</h2>
+  </div>
+  <div id="grid-container">
+    <div id="grid-item">
+      <div id="icon-container"><i class="fas fa-school" style="vertical-align: middle;"></i></div>
+      <div id="project-description">
+        <p>High School of Graphic Comunication Arts</p>
+        <p>
+          ITC Job #:<br>
+          LLW #:<br>
+          Design #:
+        </p>
+        <p>
+          439 West 49th Street <br>
+          New York, NY 10019
+        </p>
+        <button id="project-status-attn"></button>
+      </div>
+    </div>
+    <div id="grid-item">
+      <div id="icon-container"><i class="fas fa-school"></i></div>
+      <div id="project-description">
+        <p>PS 34K</p>
+        <p>
+          ITC Job #:<br>
+          LLW #:<br>
+          Design #:
+        </p>
+        <p>
+          131 Norman Avenue<br>
+          Brooklyn, NY 11222
+        </p>
+        <button id="project-status-active"></button>
+      </div>
+    </div>
+    <div id="grid-item">
+      <div id="icon-container"><i class="fas fa-school"></i></div>
+      <div id="project-description">
+        <p>PS 12Q</p>
+        <p>
+          ITC Job #:<br>
+          LLW #:<br>
+          Design #:
+        </p>
+        <p>
+          42-00 72nd Street<br>
+          Woodside, NY 11377
+        </p>
+        <button id="project-status-complete"></button>
+      </div>
+    </div>
+    <div id="grid-item">
+      <div id="icon-container"><i class="fas fa-school"></i></div>
+      <div id="project-description">
+        <p>PS 33X</p>
+        <p>
+          ITC Job #:<br>
+          LLW #:<br>
+          Design #:
+        </p>
+        <p>
+          2424 Jerome Avenue<br>
+          Bronx, NY 10468
+        </p>
+        <button id="project-status-complete"></button>
+      </div>
+    </div>
+    <div id="grid-item">
+      <div id="icon-container"><i class="fas fa-school"></i></div>
+      <div id="project-description">
+        <p>PS 198M</p>
+        <p>
+          ITC Job #:<br>
+          LLW #:<br>
+          Design #:
+        </p>
+        <p>
+          1700 3rd Avenue<br>
+          New York, NY 10128
+        </p>
+        <button id="project-status-attn"></button>
+      </div>
+    </div>
+    <div id="grid-item">
+      <div id="icon-container"><i class="fas fa-school"></i></div>
+      <div id="project-description">
+        <p>PS 317Q</p>
+        <p>
+          ITC Job #:<br>
+          LLW #:<br>
+          Design #:
+        </p>
+        <p>
+          190 Beach 110th St<br>
+          Rockaway Park, NY 11694
+        </p>
+        <button id="project-status-attn"></button>
+      </div>
+    </div>
+    <div id="grid-item">
+      <div id="icon-container"><i class="fas fa-school"></i></div>
+      <div id="project-description">
+        <p>Walton High School</p>
+        <p>
+          ITC Job #:<br>
+          LLW #:<br>
+          Design #:
+        </p>
+        <p>
+          2780 Reservoir Avenue<br>
+          Bronx, NY 10468
+        </p>
+        <button id="project-status-complete"></button>
+      </div>
+    </div>
+    <div id="grid-item">
+      <div id="icon-container"><i class="fas fa-school"></i></div>
+      <div id="project-description">
+        <p>PS 753K</p>
+        <p>
+          ITC Job #:<br>
+          LLW #:<br>
+          Design #:
+        </p>
+        <p>
+          510 Clermont Avenue<br>
+          Brooklyn, NY 11238
+        </p>
+        <button id="project-status-complete"></button>
+      </div>
+    </div>
+    <div id="grid-item">
+      <div id="icon-container"><i class="fas fa-school"></i></div>
+      <div id="project-description">
+        <p>PS 108M</p>
+        <p>
+          ITC Job #:<br>
+          LLW #:<br>
+          Design #:
+        </p>
+        <p>
+          510 Clermont Avenue<br>
+          Brooklyn, NY 11238
+        </p>
+        <button id="project-status-complete"></button>
+      </div>
+    </div>
+    <div id="grid-item">
+      <div id="icon-container"><i class="fas fa-school"></i></div>
+      <div id="project-description">
+        <p>PS 375K</p>
+        <p>
+          ITC Job #:<br>
+          LLW #:<br>
+          Design #:
+        </p>
+        <p>
+          46 McKeever Place<br>
+          Brooklyn, NY 11225
+        </p>
+        <button id="project-status-active"></button>
+      </div>
+    </div>
+    <div id="grid-item">
+      <div id="icon-container"><i class="fas fa-school"></i></div>
+      <div id="project-description">
+        <p>PS 249K</p>
+        <p>
+          ITC Job #:<br>
+          LLW #:<br>
+          Design #:
+        </p>
+        <p>
+          18 Marlborough Road<br>
+          Brooklyn, NY 11226
+        </p>
+        <button id="project-status-complete"></button>
+      </div>
+    </div>
+    <div id="grid-item">
+      <div id="icon-container"><i class="fas fa-school"></i></div>
+      <div id="project-description">
+        <p>IS 259K</p>
+        <p>
+          ITC Job #:<br>
+          LLW #:<br>
+          Design #:
+        </p>
+        <p>
+          7305 Ft Hamilton Parkway<br>
+          Brooklyn NY 11228
+        </p>
+        <button id="project-status-complete"></button>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
