@@ -1,0 +1,108 @@
+.w3-sidebar a {
+  font-family: "Roboto", sans-serif
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.w3-wide {
+  font-family: Quicksand, sans-serif;
+}
+
+#projects-heading {
+  text-align: center;
+  margin-top: 12px;
+  border: 2px solid #dadce0;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  padding: 24px;
+  padding-top: 22px;
+  position: relative;
+}
+
+#projects-heading-container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#projects-icon-container {
+  position: relative;
+  vertical-align: middle;
+  width: 40%;
+  float: left;
+  background-color: #dadce0;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 65px;
+  text-align: center;
+}
+
+#project-description p {
+  font-size: 14px;
+}
+
+#projects-grid-item {
+  background-color: transparent;
+  border-radius: 8px;
+  border: 2px solid #dadce0;
+  font-size: 30px;
+  text-align: center;
+  overflow: hidden;
+}
+
+#project-status-active {
+  background-color: orange;
+  border: none;
+  border-radius: 8px;
+  width: 100px;
+  color: white;
+  text-decoration: none;
+  padding: 5px 5px 5px 5px;
+  font-size: 16px;
+  cursor: default;
+  outline: none;
+}
+
+#project-status-active:after {
+  content: 'Active';
+}
+
+#project-status-complete {
+  background-color: green;
+  border: none;
+  border-radius: 8px;
+  width: 100px;
+  color: white;
+  text-decoration: none;
+  padding: 5px 5px 5px 5px;
+  font-size: 16px;
+  cursor: default;
+  outline: none;
+}
+
+#project-status-complete:after {
+  content: 'Complete';
+}
+
+#project-status-attn {
+  background-color: red;
+  border: none;
+  border-radius: 8px;
+  width: 100px;
+  color: white;
+  text-decoration: none;
+  padding: 5px 5px 5px 5px;
+  font-size: 16px;
+  cursor: default;
+  outline: none;
+}
+
+#project-status-attn:after {
+  content: 'Attention';
+}

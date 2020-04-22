@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<!-- Introduce Styles -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+<style>
+  body {
+    font-family: Quicksand, sans-serif;
+    text-align: left;
+  }
+
+  h2 {
+    text-align: center;
+    /*font-size: 4vh;*/
+    margin-top: 12px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    padding: 24px;
+    padding-top: 22px;
+    position: relative;
+  }
+
+  fieldset {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    padding: 24px;
+    margin-top: 0;
+    page-break-inside: avoid;
+
+  }
+
+  legend {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    float: left;
+    margin-bottom: .5em;
+    width: 100%;
+
+  }
+
+  .form-group {}
+
+  input[type="date"],
+  input[type="text"] {
+    font-family: Quicksand, sans-serif;
+    background-color: (0, 0, 0, 0.54);
+    border-radius: 4px;
+    border: 1px solid #dadce0;
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    min-width: 0%;
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .2px;
+  }
+
+  select {
+    border-radius: 8px;
+    height: auto;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-right: 48px;
+    padding-left: 16px;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .2px;
+    line-height: 20px;
+    border-color: rgba(0, 0, 0, 0.54);
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  #help-block {
+    font-size: 12px;
+  }
+
+  #attch_bttn {
+    display: inline-block;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid #dadce0;
+    background-color: white;
+    font-size: 16px;
+    color: #1a73e8;
+  }
+
+  #attch_bttn:hover {
+    background-color: #1a73e8;
+    color: white;
+  }
+
+  input[type="file"] {
+    position: absolute;
+    z-index: -1;
+    top: 26px;
+    left: 1px;
+    font-size: 16px;
+    color: black;
+    outline: none;
+  }
+
+  input[type="file"]::-ms-browse {
+    display: inline-block;
+    padding: 8px 5px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid #dadce0;
+    background-color: white;
+    font-size: 16px;
+    color: #1a73e8;
+  }
+
+  input[type="file"]::-webkit-file-upload-button {
+    display: inline-block;
+    padding: 8px 5px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid #dadce0;
+    background-color: white;
+    font-size: 16px;
+    color: #1a73e8;
+  }
+
+  #bttn_wrp {
+    position: relative;
+  }
+
+  input[type="button"] {
+    outline: none;
+    padding: 8px 20px 8px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid #dadce0;
+    background-color: white;
+    font-size: 16px;
+    color: #1a73e8;
+  }
+
+  input[type="button"]:hover {
+    background-color: #1a73e8;
+    color: white;
+  }
+</style>
+<!-- End Styles -->
+
+<body>
+  <div>
+    <a href="/projects.html">Projects</a>
+  </div>
+  <!-- Begin Form -->
+  <form id="uploadForm" action="https://script.google.com/macros/s/AKfycbxcWkJzUySjqOR7DvwqQssb4I7VkP_yYyWVntdUFCzf4X1bZw/exec" method="POST">
+    <h2>PS 108M - Upload a Submittal</h2>
+    <!-- Hidden Elements in form Header -->
+    <input type="hidden" value="" name="fileContent" id="fileContent">
+    <input type="hidden" value="" name="filename" id="filename">
+
+    <!-- Spec Section Selector -->
+    <fieldset>
+      <legend for="spec_sec">Spec Section:</legend>
+      <div class="form-group">
+        <select required id="spec_sec" name="spec_sec">
+          <option value="03120">03120</option>
+          <option value="03200">03200</option>
+          <option value="05500">05500</option>
+          <option value="07115">07115</option>
+          <option value="07150">07150</option>
+          <option value="08110">08110</option>
+          <option value="08710">08710</option>
+          <option value="09900">09900</option>
+          <option value="10214">10214</option>
+          <option value="11300">11300</option>
+          <option value="11400">11400</option>
+          <option value="15410">15410</option>
+          <option value="15411">15411</option>
+          <option value="15412">15412</option>
+          <option value="15415">15415</option>
+          <option value="15416">15416</option>
+          <option value="15417">15417</option>
+          <option value="15418">15418</option>
+          <option value="15451">15451</option>
+          <option value="15453">15453</option>
+          <option value="15511">15511</option>
+          <option value="15516">15516</option>
+          <option value="15555">15555</option>
+          <option value="15580">15580</option>
+          <option value="15592">15592</option>
+          <option value="15596">15596</option>
+          <option value="15836">15836</option>
+          <option value="15852">15852</option>
+          <option value="15860">15860</option>
+          <option value="15915">15915</option>
+          <option value="15974">15974</option>
+          <option value="16720">16720</option>
+        </select>
+      </div>
+    </fieldset>
+    <!-- End Spec Section Selector -->
+
+    <!-- Begin Revison Nubmer Section -->
+    <fieldset>
+      <legend for="rev_num">Revision Number:</legend>
+      <div class="form-group">
+        <input required id="rev_num" type="text" name="rev_num">
+      </div>
+    </fieldset>
+    <!-- End Revison Number Section -->
+
+    <!-- Begin Vendor/Subcontractor Section -->
+    <fieldset>
+      <legend for="vend_sub">Vendor/Subcontractor:</legend>
+      <div class="form-group">
+        <select required id="vend_sub" name="vend_sub">
+          <option value="ITC">ITC</option>
+          <option value="1st Heating Solutions">1st Heating Solutions</option>
+          <option value="A&amp;L Cesspool">A&amp;L Cesspool</option>
+          <option value="AB Environmental">AB Environmental</option>
+          <option value="ABC &amp; NY">ABC &amp; NY</option>
+          <option value="Able Rigging">Able Rigging</option>
+          <option value="Acqua Treat">Acqua Treat</option>
+          <option value="ACS">ACS</option>
+          <option value="Atco Contracting Group">Atco Contracting Group</option>
+          <option value="ATI">ATI</option>
+          <option value="B&amp;R">B&amp;R</option>
+          <option value="Berco Tank">Berco Tank</option>
+          <option value="Big City Boilers">Big City Boilers</option>
+          <option value="BRE">BRE</option>
+          <option value="Cerco Products">Cerco Products</option>
+          <option value="Core Tech">Core Tech</option>
+          <option value="Crossroads">Crossroads</option>
+          <option value="D&amp;N Services">D&amp;N Services</option>
+          <option value="Delta Reliable Cleaning">Delta Reliable Cleaning</option>
+          <option value="EAI">EAI</option>
+          <option value="EASCO">EASCO</option>
+          <option value="First Alert">First Alert</option>
+          <option value="GDT">GDT</option>
+          <option value="Gregory Reaves">Gregory Reaves</option>
+          <option value="H&amp;B Equipment Sales">H&amp;B Equipment Sales</option>
+          <option value="High Volt">High Volt</option>
+          <option value="Infinity Contracting">Infinity Contracting</option>
+          <option value="Island Foundation Corp">Island Foundation Corp</option>
+          <option value="J&amp;D Carrying">J&amp;D Carrying</option>
+          <option value="Johnson Controls">Johnson Controls</option>
+          <option value="Metalline Fire Door Co">Metalline Fire Door Co</option>
+          <option value="MLB Door Group">MLB Door Group</option>
+          <option value="NK Construction">NK Construction</option>
+          <option value="Peak Security">Peak Security</option>
+          <option value="Precision General">Precision General</option>
+          <option value="Purity Labs">Purity Labs</option>
+          <option value="Rockhard Services LLC">Rockhard Services LLC</option>
+          <option value="Roebell Painters">Roebell Painters</option>
+          <option value="Sam Tell Companies">Sam Tell Companies</option>
+          <option value="SPJ Piping">SPJ Piping</option>
+          <option value="SRS">SRS</option>
+          <option value="Triangle Enterprise">Triangle Enterprise</option>
+          <option value="Tristian Contracting">Tristian Contracting</option>
+          <option value="Vital Plumbing">Vital Plumbing</option>
+        </select>
+      </div>
+    </fieldset>
+    <!-- End Vendor/Subcontractor Section -->
+
+    <!-- Begin Date Submitted Section -->
+    <fieldset>
+      <legend for="date_sub">Date Submitted:</legend>
+      <div class="form-group">
+        <input type="date" id="date_sub" name="date_sub" required>
+      </div>
+    </fieldset>
+    <!-- End Date Submitted Section -->
+
+    <!-- Begin Date Returned Section -->
+    <fieldset>
+      <legend for="date_ret">Date Returned:</legend>
+      <div class="form-group">
+        <input type="date" id="date-ret" name="date_ret" required>
+      </div>
+    </fieldset>
+    <!-- End Date Returned Section -->
+
+    <!-- Begin Approval Status Section -->
+    <fieldset>
+      <legend for="app_stat">Approval Status:</legend>
+      <div class="form-group">
+        <p id="help-block">NET / APP - No Exceptions Taken / Approved | MCN / AAN - Make Changes Noted / Approved as Noted | NAT - No Action Taken | RRS - Revise and Resubmit | REJ - Rejected</p>
+        <div class="radio">
+          <input type="radio" name="app_stat" id="net_app" value="NET / APP" required>
+          <label for="app_stat">NET / APP</label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="app_stat" id="mcn_aan" value="MCN / AAN" required>
+          <label for="app_stat">MCN / AAN</label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="app_stat" id="nat" value="NAT" required>
+          <label for="app_stat">NAT</label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="app_stat" id="rrs" value="RRS" required>
+          <label for="app_stat">RRS</label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="app_stat" id="rej" value="REJ" required>
+          <label for="app_stat">REJ</label>
+        </div>
+      </div>
+    </fieldset>
+    <!-- End Approval Status Section -->
+    <input type="hidden" name="fvv" value="1">
+    <input type="hidden" name="fbzx" value="6923109898625439205">
+
+    <input type="hidden" name="pageHistory" value="0">
+
+    <!-- Begin File Upload and Submit Section -->
+    <fieldset>
+      <legend for="attach">Upload Submital:</legend>
+      <div id="bttn_wrp">
+        <label id="attch_bttn" for="attach"><i class="fa fa-upload"></i> Add files
+          <input required id="attach" name="attach" type="file" multiple />
+        </label>
+      </div>
+    </fieldset>
+    <input value="Submit" type="button" onclick="UploadFile();" />
+    <!-- End File Upload and Submit -->
+  </form>
+  <!-- End Form -->
+
+  <script>
+    function UploadFile() {
+      var reader = new FileReader();
+      var file = document.getElementById('attach').files[0];
+      reader.onload = function() {
+        document.getElementById('fileContent').value = reader.result;
+        document.getElementById('filename').value = file.name;
+        document.getElementById('uploadForm').submit();
+      }
+      reader.readAsDataURL(file);
+    }
+  </script>
+</body>
+
+</html>
