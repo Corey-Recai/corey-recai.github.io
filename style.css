@@ -56,6 +56,11 @@ h6,
   overflow: hidden;
 }
 
+#projects-grid-divider {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
 #project-status-active {
   background-color: orange;
   border: none;
