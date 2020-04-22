@@ -25,11 +25,12 @@
     <!-- Begin Projects Section -->
     <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
       <a href="#" class="w3-bar-item w3-button">Home</a>
-      <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align w3-light-grey" id="myBtn">
-        Projects <i class="fa fa-caret-down"></i>
-      </a>
+      <div id="projects-nav-text" class="w3-button w3-block w3-white w3-left-align w3-light-gray">
+        <a href="index.html">Projects </a>
+        <a onclick="myAccFunc()" href="javascript:void(0)" id="myBtn"><i class="fa fa-caret-down"></i></a>
+      </div>
       <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-        <a href="#" class="w3-bar-item w3-button">PS 108M</a>
+        <a href="/108-sub-form.html" class="w3-bar-item w3-button">PS 108M</a>
         <a href="#" class="w3-bar-item w3-button">Page Placeholder</a>
         <a href="#" class="w3-bar-item w3-button">Page Placeholder</a>
         <a href="#" class="w3-bar-item w3-button">Page Placeholder</a>
@@ -53,7 +54,7 @@
 
   <!-- Top menu on small screens -->
   <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-    <div class="w3-bar-item w3-padding-24 w3-wide">LOGO</div>
+    <div class="w3-bar-item w3-padding-24 w3-wide">ITC | DMS</div>
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
   </header>
   <!-- End Top menu on small screens -->
@@ -70,20 +71,18 @@
 
     <!-- Page Title -->
     <header class="w3-container w3-xlarge">
-      <div id="projects-heading-container">
-        <h1 id="projects-heading" class="w3-center">Projects</h1>
+      <div id="page-heading-container">
+        <h1 id="page-heading" class="w3-center">Projects</h1>
       </div>
     </header>
     <!-- End Page Title -->
 
-    <div id="projects-grid-divider"></div>
-
     <!-- First Projects Grid-->
     <div class="w3-row-padding">
       <div class="w3-third w3-container w3-margin-bottom">
-        <div id="projects-grid-item">
-          <div id="projects-icon-container"><i class="fas fa-school" style="vertical-align: middle;"></i></div>
-          <div id="project-description">
+        <div id="projects-grid-item" class="w3-panel w3-border w3-round">
+          <div id="projects-icon-container" class="w3-col s3 w3-quarter"><i class="fas fa-school" style="vertical-align: middle;"></i></div>
+          <div id="project-description" class="w3-col s9 w3-threequarter">
             <p>High School of Graphic Comm. Arts</p>
             <p>
               ITC Job #:<br>
@@ -99,9 +98,9 @@
         </div>
       </div>
       <div class="w3-third w3-container w3-margin-bottom">
-        <div id="projects-grid-item">
-          <div id="projects-icon-container"><i class="fas fa-school"></i></div>
-          <div id="project-description">
+        <div id="projects-grid-item" class="w3-panel w3-border w3-round">
+          <div id="projects-icon-container" class="w3-col s3 w3-quarter"><i class="fas fa-school"></i></div>
+          <div id="project-description" class="w3-col s9 w3-threequarter">
             <p>PS 34K</p>
             <p>
               ITC Job #:<br>
@@ -117,9 +116,9 @@
         </div>
       </div>
       <div class="w3-third w3-container">
-        <div id="projects-grid-item">
-          <div id="projects-icon-container"><i class="fas fa-school"></i></div>
-          <div id="project-description">
+        <div id="projects-grid-item" class="w3-panel w3-border w3-round">
+          <div id="projects-icon-container" class="w3-col s3 w3-quarter"><i class="fas fa-school"></i></div>
+          <div id="project-description" class="w3-col s9 w3-threequarter">
             <p>PS 12Q</p>
             <p>
               ITC Job #:<br>
@@ -137,14 +136,12 @@
     </div>
     <!-- End First Projects Grid-->
 
-    <div id="projects-grid-divider"></div>
-
     <!-- Second Projects Grid-->
     <div class="w3-row-padding">
       <div class="w3-third w3-container w3-margin-bottom">
-        <div id="projects-grid-item">
-          <div id="projects-icon-container"><i class="fas fa-school"></i></div>
-          <div id="project-description">
+        <div id="projects-grid-item" class="w3-panel w3-border w3-round">
+          <div id="projects-icon-container" class="w3-col s3 w3-quarter"><i class="fas fa-school"></i></div>
+          <div id="project-description" class="w3-col s9 w3-threequarter">
             <p>PS 33X</p>
             <p>
               ITC Job #:<br>
@@ -160,9 +157,9 @@
         </div>
       </div>
       <div class="w3-third w3-container w3-margin-bottom">
-        <div id="projects-grid-item">
-          <div id="projects-icon-container"><i class="fas fa-school"></i></div>
-          <div id="project-description">
+        <div id="projects-grid-item" class="w3-panel w3-border w3-round">
+          <div id="projects-icon-container" class="w3-col s3 w3-quarter"><i class="fas fa-school"></i></div>
+          <div id="project-description" class="w3-col s9 w3-threequarter">
             <p>PS 198M</p>
             <p>
               ITC Job #:<br>
@@ -178,9 +175,9 @@
         </div>
       </div>
       <div class="w3-third w3-container">
-        <div id="projects-grid-item">
-          <div id="projects-icon-container"><i class="fas fa-school"></i></div>
-          <div id="project-description">
+        <div id="projects-grid-item" class="w3-panel w3-border w3-round">
+          <div id="projects-icon-container" class="w3-col s3 w3-quarter"><i class="fas fa-school"></i></div>
+          <div id="project-description" class="w3-col s9 w3-threequarter">
             <p>PS 317Q</p>
             <p>
               ITC Job #:<br>
@@ -198,14 +195,12 @@
     </div>
     <!-- End Second Projects Grid-->
 
-    <div id="projects-grid-divider"></div>
-
     <!-- Third Projects Grid-->
     <div class="w3-row-padding">
       <div class="w3-third w3-container w3-margin-bottom">
-        <div id="projects-grid-item">
-          <div id="projects-icon-container"><i class="fas fa-school"></i></div>
-          <div id="project-description">
+        <div id="projects-grid-item" class="w3-panel w3-border w3-round">
+          <div id="projects-icon-container" class="w3-col s3 w3-quarter"><i class="fas fa-school"></i></div>
+          <div id="project-description" class="w3-col s9 w3-threequarter">
             <p>Walton High School</p>
             <p>
               ITC Job #:<br>
@@ -221,9 +216,9 @@
         </div>
       </div>
       <div class="w3-third w3-container w3-margin-bottom">
-        <div id="projects-grid-item">
-          <div id="projects-icon-container"><i class="fas fa-school"></i></div>
-          <div id="project-description">
+        <div id="projects-grid-item" class="w3-panel w3-border w3-round">
+          <div id="projects-icon-container" class="w3-col s3 w3-quarter"><i class="fas fa-school"></i></div>
+          <div id="project-description" class="w3-col s9 w3-threequarter">
             <p>PS 753K</p>
             <p>
               ITC Job #:<br>
@@ -239,9 +234,9 @@
         </div>
       </div>
       <div class="w3-third w3-container">
-        <div id="projects-grid-item">
-          <div id="projects-icon-container"><i class="fas fa-school"></i></div>
-          <div id="project-description">
+        <div id="projects-grid-item" class="w3-panel w3-border w3-round">
+          <div id="projects-icon-container" class="w3-col s3 w3-quarter"><i class="fas fa-school"></i></div>
+          <div id="project-description" class="w3-col s9 w3-threequarter">
             <p>PS 108M</p>
             <p>
               ITC Job #:<br>
@@ -259,14 +254,12 @@
     </div>
     <!-- End Third Projects Grid-->
 
-    <div id="projects-grid-divider"></div>
-
     <!-- Fourth Projects Grid-->
     <div class="w3-row-padding">
       <div class="w3-third w3-container w3-margin-bottom">
-        <div id="projects-grid-item">
-          <div id="projects-icon-container"><i class="fas fa-school"></i></div>
-          <div id="project-description">
+        <div id="projects-grid-item" class="w3-panel w3-border w3-round">
+          <div id="projects-icon-container" class="w3-col s3 w3-quarter"><i class="fas fa-school"></i></div>
+          <div id="project-description" class="w3-col s9 w3-threequarter">
             <p>PS 375K</p>
             <p>
               ITC Job #:<br>
@@ -282,9 +275,9 @@
         </div>
       </div>
       <div class="w3-third w3-container w3-margin-bottom">
-        <div id="projects-grid-item">
-          <div id="projects-icon-container"><i class="fas fa-school"></i></div>
-          <div id="project-description">
+        <div id="projects-grid-item" class="w3-panel w3-border w3-round">
+          <div id="projects-icon-container" class="w3-col s3 w3-quarter"><i class="fas fa-school"></i></div>
+          <div id="project-description" class="w3-col s9 w3-threequarter">
             <p>PS 249K</p>
             <p>
               ITC Job #:<br>
@@ -300,9 +293,9 @@
         </div>
       </div>
       <div class="w3-third w3-container">
-        <div id="projects-grid-item">
-          <div id="projects-icon-container"><i class="fas fa-school"></i></div>
-          <div id="project-description">
+        <div id="projects-grid-item" class="w3-panel w3-border w3-round">
+          <div id="projects-icon-container" class="w3-col s3 w3-quarter"><i class="fas fa-school"></i></div>
+          <div id="project-description" class="w3-col s9 w3-threequarter">
             <p>IS 259K</p>
             <p>
               ITC Job #:<br>
@@ -319,8 +312,6 @@
       </div>
     </div>
     <!-- End Fourth Projects Grid-->
-
-    <div id="projects-grid-divider"></div>
 
     <!-- Footer -->
     <div class="w3-black w3-center w3-padding-24">

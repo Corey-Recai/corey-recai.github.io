@@ -13,7 +13,11 @@ h6,
   font-family: Quicksand, sans-serif;
 }
 
-#projects-heading {
+#projects-nav-text a {
+  text-decoration: none;
+}
+
+#page-heading {
   text-align: center;
   margin-top: 12px;
   border: 2px solid #dadce0;
@@ -24,36 +28,44 @@ h6,
   position: relative;
 }
 
-#projects-heading-container {
+#page-heading-container {
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
+/* Project Page Styles */
 #projects-icon-container {
-  position: relative;
-  vertical-align: middle;
-  width: 40%;
-  float: left;
-  background-color: #dadce0;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  padding-left: 40px;
-  padding-right: 40px;
-  font-size: 65px;
+  background-color: lightgray;
+  padding-top: 100px;
+  padding-bottom: 110px;
+}
+
+#projects-icon-container i {
+  position: sticky;
+  font-size: 3.5vw;
+}
+
+#project-description {
   text-align: center;
+  /*padding-top: 5%;
+  padding-bottom: 5px;*/
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  top: 25px;
 }
 
 #project-description p {
-  font-size: 14px;
+  font-size: 1.2vh;
 }
 
 #projects-grid-item {
-  background-color: transparent;
-  border-radius: 8px;
-  border: 2px solid #dadce0;
-  font-size: 30px;
   text-align: center;
   overflow: hidden;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 #projects-grid-divider {
@@ -111,3 +123,146 @@ h6,
 #project-status-attn:after {
   content: 'Attention';
 }
+
+/* End Project Page Styles*/
+/* Submittal Form Styles */
+#uploadForm {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px
+}
+
+fieldset {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  padding: 24px;
+  margin-top: 0;
+  page-break-inside: avoid;
+}
+
+legend {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  float: left;
+  margin-bottom: .5em;
+  width: 100%;
+}
+
+.form-group {}
+
+input[type="date"],
+input[type="text"] {
+  font-family: Quicksand, sans-serif;
+  background-color: (0, 0, 0, 0.54);
+  border-radius: 4px;
+  border: 1px solid #dadce0;
+  display: block;
+  height: 24px;
+  line-height: 24px;
+  min-width: 0%;
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .2px;
+}
+
+select {
+  border-radius: 8px;
+  height: auto;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  padding-right: 48px;
+  padding-left: 16px;
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .2px;
+  line-height: 20px;
+  border-color: rgba(0, 0, 0, 0.54);
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+
+label {
+  font-size: 14px;
+}
+
+#help-block {
+  font-size: 12px;
+}
+
+#attch_bttn {
+  display: inline-block;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid #dadce0;
+  background-color: white;
+  font-size: 16px;
+  color: #1a73e8;
+}
+
+#attch_bttn:hover {
+  background-color: #1a73e8;
+  color: white;
+}
+
+input[type="file"] {
+  position: absolute;
+  z-index: -1;
+  top: 32px;
+  left: 1px;
+  font-size: 16px;
+  color: black;
+  outline: none;
+}
+
+input[type="file"]::-ms-browse {
+  display: inline-block;
+  padding: 8px 5px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid #dadce0;
+  background-color: white;
+  font-size: 16px;
+  color: #1a73e8;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  display: inline-block;
+  padding: 8px 5px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid #dadce0;
+  background-color: white;
+  font-size: 16px;
+  color: #1a73e8;
+}
+
+#bttn_wrp {
+  position: relative;
+}
+
+input[type="button"] {
+  outline: none;
+  padding: 8px 20px 8px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid #dadce0;
+  background-color: white;
+  font-size: 16px;
+  color: #1a73e8;
+}
+
+input[type="button"]:hover {
+  background-color: #1a73e8;
+  color: white;
+}
+
+/* End Submittal Form Styles */
