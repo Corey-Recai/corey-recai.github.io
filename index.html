@@ -1,367 +1,117 @@
 <!DOCTYPE html>
-<html>
-<title>ITC|DMS</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/style.css">
-<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<html lang="en">
 
-<body class="w3-content" style="max-width:1600px">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
 
-  <!-- Sidebar/menu -->
-
-  <!-- Begin Logo Section -->
-  <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
-    <div class="w3-container w3-display-container w3-padding-16">
-      <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
-      <h3 class="w3-wide"><b>ITC | DMS</b></h3>
+<body>
+    <!-- Begin Navbar-->
+    <div class="header">
+        <nav class="grey">
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <!-- navbar content here  -->
+        </nav>
     </div>
-    <!-- End Logo Section -->
+    <!-- End Navbar-->
+    <!-- Begin Sidenav-->
+    <ul id="slide-out" class="sidenav sidenav-fixed">
+        <li>
+            <h2 class="center-align">ITC | DMS</h2>
+        </li>
+        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+        <li><a href="#!">Second Link</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Subheader</a></li>
+        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    </ul>
+    <!-- End Sidenav -->
+    <div class="main">
+        <!-- Begin Cards -->
+        <div class="row">
+            <div class="col s12 m9 l4 offset-m2">
+                <div class="card horizontal">
+                    <div class="card-image grey lighten-2 valign-wrapper">
+                        <i id="card-icon" class="material-icons">school</i>
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content center-align">
+                            <p>High School of Graphic Communication Arts</p>
+                            <p>
+                                ITC Job #:<br>
+                                LLW #:<br>
+                                Design #:
+                            </p>
+                            <p>
+                                439 West 49th Street <br>
+                                New York, NY 10019
+                            </p>
+                        </div>
+                        <div class="card-action center-align">
+                            <a class="btn orange" href="#">Active</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m12 l4 offset-m2">
+                <div class="card horizontal">
+                    <div class="card-image grey lighten-2 valign-wrapper">
+                        <i id="card-icon" class="material-icons">school</i>
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m12 l4 offset-m2">
+                <div class="card horizontal">
+                    <div class="card-image grey lighten-2 valign-wrapper">
+                        <i id="card-icon" class="material-icons">school</i>
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <!-- Begin Projects Section -->
-    <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-      <a href="#" class="w3-bar-item w3-button">Home</a>
-      <div id="projects-nav-text" class="w3-button w3-block w3-white w3-left-align w3-light-gray">
-        <a href="index.html">Projects </a>
-        <a onclick="myAccFunc()" href="javascript:void(0)" id="myBtn"><i class="fa fa-caret-down"></i></a>
-      </div>
-      <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
-        <a href="/108-sub-form.html" class="w3-bar-item w3-button">PS 108M</a>
-        <a href="#" class="w3-bar-item w3-button">Page Placeholder</a>
-        <a href="#" class="w3-bar-item w3-button">Page Placeholder</a>
-        <a href="#" class="w3-bar-item w3-button">Page Placeholder</a>
-      </div>
-      <!-- End Projects Section -->
 
-      <!-- Begin Rest of Nav -->
-      <a href="#" class="w3-bar-item w3-button">Page Placeholder</a>
-      <a href="#" class="w3-bar-item w3-button">Page Placeholder</a>
-      <a href="#" class="w3-bar-item w3-button">Page Placeholder</a>
-      <a href="#" class="w3-bar-item w3-button">Page Placeholder</a>
+
+
     </div>
-    <!-- End Rest of Nav -->
-
-    <!-- Begin Nav Footer -->
-    <a href="#footer" class="w3-bar-item w3-button w3-padding">Link Placeholder</a>
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Modal Placeholder</a>
-    <a href="#footer" class="w3-bar-item w3-button w3-padding">Link Placeholder</a>
-  </nav>
-  <!-- End Nav Footer -->
-
-  <!-- Top menu on small screens -->
-  <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-    <div class="w3-bar-item w3-padding-24 w3-wide">ITC | DMS</div>
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-  </header>
-  <!-- End Top menu on small screens -->
-
-  <!-- Overlay effect when opening sidebar on small screens -->
-  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-  <!-- End Overlay effect -->
-
-  <!-- !PAGE CONTENT! -->
-  <div class="w3-main" style="margin-left:250px">
-
-    <!-- Push down content on small screens -->
-    <div class="w3-hide-large" style="margin-top:83px"></div>
-
-    <!-- Page Title -->
-    <header class="w3-container w3-xlarge">
-      <div id="page-heading-container">
-        <h1 id="page-heading" class="w3-center">Projects</h1>
-      </div>
-    </header>
-    <!-- End Page Title -->
-
-    <!-- First Projects Grid-->
-    <div class="w3-row-padding">
-      <div class="w3-third w3-container w3-margin-bottom">
-        <div id="projects-grid-item" class="w3-panel w3-border w3-round">
-          <div id="projects-icon-container" class="w3-col s3 w3-quarter"><i class="fas fa-school" style="vertical-align: middle;"></i></div>
-          <div id="project-description" class="w3-col s9 w3-threequarter">
-            <p>High School of Graphic Comm. Arts</p>
-            <p>
-              ITC Job #:<br>
-              LLW #:<br>
-              Design #:
-            </p>
-            <p>
-              439 West 49th Street <br>
-              New York, NY 10019
-            </p>
-            <button id="project-status-attn"></button>
-          </div>
-        </div>
-      </div>
-      <div class="w3-third w3-container w3-margin-bottom">
-        <div id="projects-grid-item" class="w3-panel w3-border w3-round">
-          <div id="projects-icon-container" class="w3-col s3 w3-quarter"><i class="fas fa-school"></i></div>
-          <div id="project-description" class="w3-col s9 w3-threequarter">
-            <p>PS 34K</p>
-            <p>
-              ITC Job #:<br>
-              LLW #:<br>
-              Design #:
-            </p>
-            <p>
-              131 Norman Avenue<br>
-              Brooklyn, NY 11222
-            </p>
-            <button id="project-status-active"></button>
-          </div>
-        </div>
-      </div>
-      <div class="w3-third w3-container">
-        <div id="projects-grid-item" class="w3-panel w3-border w3-round">
-          <div id="projects-icon-container" class="w3-col s3 w3-quarter"><i class="fas fa-school"></i></div>
-          <div id="project-description" class="w3-col s9 w3-threequarter">
-            <p>PS 12Q</p>
-            <p>
-              ITC Job #:<br>
-              LLW #:<br>
-              Design #:
-            </p>
-            <p>
-              42-00 72nd Street<br>
-              Woodside, NY 11377
-            </p>
-            <button id="project-status-complete"></button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End First Projects Grid-->
-
-    <!-- Second Projects Grid-->
-    <div class="w3-row-padding">
-      <div class="w3-third w3-container w3-margin-bottom">
-        <div id="projects-grid-item" class="w3-panel w3-border w3-round">
-          <div id="projects-icon-container" class="w3-col s3 w3-quarter"><i class="fas fa-school"></i></div>
-          <div id="project-description" class="w3-col s9 w3-threequarter">
-            <p>PS 33X</p>
-            <p>
-              ITC Job #:<br>
-              LLW #:<br>
-              Design #:
-            </p>
-            <p>
-              2424 Jerome Avenue<br>
-              Bronx, NY 10468
-            </p>
-            <button id="project-status-complete"></button>
-          </div>
-        </div>
-      </div>
-      <div class="w3-third w3-container w3-margin-bottom">
-        <div id="projects-grid-item" class="w3-panel w3-border w3-round">
-          <div id="projects-icon-container" class="w3-col s3 w3-quarter"><i class="fas fa-school"></i></div>
-          <div id="project-description" class="w3-col s9 w3-threequarter">
-            <p>PS 198M</p>
-            <p>
-              ITC Job #:<br>
-              LLW #:<br>
-              Design #:
-            </p>
-            <p>
-              1700 3rd Avenue<br>
-              New York, NY 10128
-            </p>
-            <button id="project-status-attn"></button>
-          </div>
-        </div>
-      </div>
-      <div class="w3-third w3-container">
-        <div id="projects-grid-item" class="w3-panel w3-border w3-round">
-          <div id="projects-icon-container" class="w3-col s3 w3-quarter"><i class="fas fa-school"></i></div>
-          <div id="project-description" class="w3-col s9 w3-threequarter">
-            <p>PS 317Q</p>
-            <p>
-              ITC Job #:<br>
-              LLW #:<br>
-              Design #:
-            </p>
-            <p>
-              190 Beach 110th St<br>
-              Rockaway Park, NY 11694
-            </p>
-            <button id="project-status-attn"></button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Second Projects Grid-->
-
-    <!-- Third Projects Grid-->
-    <div class="w3-row-padding">
-      <div class="w3-third w3-container w3-margin-bottom">
-        <div id="projects-grid-item" class="w3-panel w3-border w3-round">
-          <div id="projects-icon-container" class="w3-col s3 w3-quarter"><i class="fas fa-school"></i></div>
-          <div id="project-description" class="w3-col s9 w3-threequarter">
-            <p>Walton High School</p>
-            <p>
-              ITC Job #:<br>
-              LLW #:<br>
-              Design #:
-            </p>
-            <p>
-              2780 Reservoir Avenue<br>
-              Bronx, NY 10468
-            </p>
-            <button id="project-status-complete"></button>
-          </div>
-        </div>
-      </div>
-      <div class="w3-third w3-container w3-margin-bottom">
-        <div id="projects-grid-item" class="w3-panel w3-border w3-round">
-          <div id="projects-icon-container" class="w3-col s3 w3-quarter"><i class="fas fa-school"></i></div>
-          <div id="project-description" class="w3-col s9 w3-threequarter">
-            <p>PS 753K</p>
-            <p>
-              ITC Job #:<br>
-              LLW #:<br>
-              Design #:
-            </p>
-            <p>
-              510 Clermont Avenue<br>
-              Brooklyn, NY 11238
-            </p>
-            <button id="project-status-complete"></button>
-          </div>
-        </div>
-      </div>
-      <div class="w3-third w3-container">
-        <div id="projects-grid-item" class="w3-panel w3-border w3-round">
-          <div id="projects-icon-container" class="w3-col s3 w3-quarter"><i class="fas fa-school"></i></div>
-          <div id="project-description" class="w3-col s9 w3-threequarter">
-            <p>PS 108M</p>
-            <p>
-              ITC Job #:<br>
-              LLW #:<br>
-              Design #:
-            </p>
-            <p>
-              510 Clermont Avenue<br>
-              Brooklyn, NY 11238
-            </p>
-            <button id="project-status-complete"></button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Third Projects Grid-->
-
-    <!-- Fourth Projects Grid-->
-    <div class="w3-row-padding">
-      <div class="w3-third w3-container w3-margin-bottom">
-        <div id="projects-grid-item" class="w3-panel w3-border w3-round">
-          <div id="projects-icon-container" class="w3-col s3 w3-quarter"><i class="fas fa-school"></i></div>
-          <div id="project-description" class="w3-col s9 w3-threequarter">
-            <p>PS 375K</p>
-            <p>
-              ITC Job #:<br>
-              LLW #:<br>
-              Design #:
-            </p>
-            <p>
-              46 McKeever Place<br>
-              Brooklyn, NY 11225
-            </p>
-            <button id="project-status-active"></button>
-          </div>
-        </div>
-      </div>
-      <div class="w3-third w3-container w3-margin-bottom">
-        <div id="projects-grid-item" class="w3-panel w3-border w3-round">
-          <div id="projects-icon-container" class="w3-col s3 w3-quarter"><i class="fas fa-school"></i></div>
-          <div id="project-description" class="w3-col s9 w3-threequarter">
-            <p>PS 249K</p>
-            <p>
-              ITC Job #:<br>
-              LLW #:<br>
-              Design #:
-            </p>
-            <p>
-              18 Marlborough Road<br>
-              Brooklyn, NY 11226
-            </p>
-            <button id="project-status-complete"></button>
-          </div>
-        </div>
-      </div>
-      <div class="w3-third w3-container">
-        <div id="projects-grid-item" class="w3-panel w3-border w3-round">
-          <div id="projects-icon-container" class="w3-col s3 w3-quarter"><i class="fas fa-school"></i></div>
-          <div id="project-description" class="w3-col s9 w3-threequarter">
-            <p>IS 259K</p>
-            <p>
-              ITC Job #:<br>
-              LLW #:<br>
-              Design #:
-            </p>
-            <p>
-              7305 Ft Hamilton Parkway<br>
-              Brooklyn NY 11228
-            </p>
-            <button id="project-status-complete"></button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Fourth Projects Grid-->
-
-    <!-- Footer -->
-    <div class="w3-black w3-center w3-padding-24">
-      <p>Designed & Developed by Corey Recai </p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a>
-    </div>
-    <!-- End Footer -->
-
-    <!-- End page content -->
-  </div>
-
-  <!-- Newsletter Modal -->
-  <div id="newsletter" class="w3-modal">
-    <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
-      <div class="w3-container w3-white w3-center">
-        <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
-        <h2 class="w3-wide">NEWSLETTER</h2>
-        <p>Join our mailing list to receive updates on new arrivals and special offers.</p>
-        <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
-        <button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Subscribe</button>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    // Accordion
-    function myAccFunc() {
-      var x = document.getElementById("demoAcc");
-      if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-      } else {
-        x.className = x.className.replace(" w3-show", "");
-      }
-    }
-
-    // Click on the "Jeans" link on page load to open the accordion for demo purposes
-    document.getElementById("myBtn").click();
-
-
-    // Open and close sidebar
-    function w3_open() {
-      document.getElementById("mySidebar").style.display = "block";
-      document.getElementById("myOverlay").style.display = "block";
-    }
-
-    function w3_close() {
-      document.getElementById("mySidebar").style.display = "none";
-      document.getElementById("myOverlay").style.display = "none";
-    }
-  </script>
-
+    <!-- Load Materialize Scripts, Font Awesome and jQuery-->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Load Font Awesome -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!-- End Load Materialize Scripts, Font Awesome and jQuery-->
+    <!-- Load Document Scripts -->
+    <script>
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+    </script>
+    <!-- End Load Document Scripts -->
 </body>
 
 </html>
