@@ -20,6 +20,10 @@
 
 }
 
+#line-spacer {
+  margin-bottom: 3rem;
+}
+
 #project-status-active:after {
   content: 'Active';
 }
