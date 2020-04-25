@@ -1,16 +1,33 @@
-.header, .main, .footer {
-    padding-left: 300px;
-  }
+.header,
+.main,
+.footer {
+  padding-left: 300px;
+}
 
-  @media only screen and (max-width : 966px) {
-    .header, .main, .footer {
-      padding-left: 0;
-    }
-  }
+@media only screen and (max-width : 966px) {
 
-  #card-icon {
-font-size: 4rem;
-padding-left: 1rem;
-padding-right: 1rem;
-
+  .header,
+  .main,
+  .footer {
+    padding-left: 0px;
   }
+}
+
+#card-icon {
+  font-size: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+}
+
+#project-status-active:after {
+  content: 'Active';
+}
+
+#project-status-complete:after {
+  content: 'Complete';
+}
+
+#project-status-attn:after {
+  content: 'Attention';
+}

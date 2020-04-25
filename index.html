@@ -16,8 +16,10 @@
     <!-- Begin Navbar-->
     <div class="header">
         <nav class="grey">
-            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <!-- navbar content here  -->
+            <div class="container">
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <!-- navbar content here  -->
+            </div>
         </nav>
     </div>
     <!-- End Navbar-->
@@ -35,70 +37,7 @@
         <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
     </ul>
     <!-- End Sidenav -->
-    <div class="main">
-        <!-- Begin Cards -->
-        <div class="row">
-            <div class="col s12 m6 l6">
-                <div class="card horizontal">
-                    <div class="card-image grey lighten-2 valign-wrapper">
-                        <i id="card-icon" class="material-icons">school</i>
-                    </div>
-                    <div class="card-stacked">
-                        <div id="card-content" class="card-content center-align">
-                            <p>High School of Graphic Communication Arts</p>
-                            <p>
-                                ITC Job #:<br>
-                                LLW #:<br>
-                                Design #:
-                            </p>
-                            <p>
-                                439 West 49th Street <br>
-                                New York, NY 10019
-                            </p>
-                        </div>
-                        <div class="card-action center-align">
-                            <a class="btn orange" href="#">Active</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m6 l6">
-                <div class="card horizontal">
-                    <div class="card-image grey lighten-2 valign-wrapper">
-                        <i id="card-icon" class="material-icons">school</i>
-                    </div>
-                    <div class="card-stacked">
-                        <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">This is a link</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12 m6 l6">
-                <div class="card horizontal">
-                    <div class="card-image grey lighten-2 valign-wrapper">
-                        <i id="card-icon" class="material-icons">school</i>
-                    </div>
-                    <div class="card-stacked">
-                        <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">This is a link</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-
+    <div id="main" class="main">
     </div>
     <!-- Load Materialize Scripts, Font Awesome and jQuery-->
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
@@ -111,6 +50,10 @@
     <script>
         $(document).ready(function () {
             $('.sidenav').sidenav();
+        });
+        // Ajax load main content into page
+        $(document).ready(function () {
+            $("#main").load("project-cards.html");
         });
     </script>
     <!-- End Load Document Scripts -->
