@@ -9,7 +9,7 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>ITC | DMS</title>
 </head>
 
 <body>
@@ -19,6 +19,7 @@
             <div class="container">
                 <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <!-- navbar content here  -->
+                  </div>
             </div>
         </nav>
     </div>
@@ -28,13 +29,13 @@
         <li>
             <h2 class="center-align">ITC | DMS</h2>
         </li>
-        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+        <li><a href="#!">First Link</a></li>
         <li><a href="#!">Second Link</a></li>
         <li>
             <div class="divider"></div>
         </li>
         <li><a class="subheader">Subheader</a></li>
-        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+        <li><a class="waves-effect" href="#!">Third Link</a></li>
     </ul>
     <!-- End Sidenav -->
     <div id="main" class="main">
@@ -48,9 +49,7 @@
     <!-- End Load Materialize Scripts, Font Awesome and jQuery-->
     <!-- Load Document Scripts -->
     <script>
-        $(document).ready(function () {
-            $('.sidenav').sidenav();
-        });
+        M.AutoInit();
         // Ajax load main content into page
         $(document).ready(function () {
             $("#main").load("project-cards.html");
