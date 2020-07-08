@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>ITC | DMS</title>
 </head>
 
@@ -16,26 +16,28 @@
     <!-- Begin Navbar-->
     <div class="header">
         <nav class="grey">
-            <div class="container">
                 <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <!-- navbar content here  -->
-                  </div>
-            </div>
         </nav>
     </div>
     <!-- End Navbar-->
     <!-- Begin Sidenav-->
     <ul id="slide-out" class="sidenav sidenav-fixed">
         <li>
-            <h2 class="center-align">ITC | DMS</h2>
+            <h2 class="center-align"><a class="black-text" href="index.html">ITC | DMS</a></h2>
         </li>
-        <li><a href="#!">First Link</a></li>
-        <li><a href="#!">Second Link</a></li>
+        <li>
+            <div class="user-view center-align">
+                <a href="#user"><img id="user-img" class="circle" src="../../img/user-icon.png"></a>
+                <a href="#name"><span class="black-text name">John Doe</span></a>
+                <a href="#email"><span class="black-text email">jdandturk@gmail.com</span></a>
+            </div>
+        </li>
         <li>
             <div class="divider"></div>
         </li>
-        <li><a class="subheader">Subheader</a></li>
-        <li><a class="waves-effect" href="108-submittal-input.html">Upload Form</a></li>
+        <li><a class="subheader">Sign Out</a></li>
+        <li><a class="waves-effect" href="#">Placeholder</a></li>
     </ul>
     <!-- End Sidenav -->
     <div id="main" class="main">
