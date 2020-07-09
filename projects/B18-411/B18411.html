@@ -4,11 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Import Google Icon Font-->
+    <link type=”text/css” rel=”stylesheet”
+        href=”https://www.google.com/calendar/ff8991338715aca3626cd204ea179fdaembedcompiled_fastui.css”> <script
+        type=”text/javascript”
+        src=”https://www.google.com/calendar/ff8991338715aca3626cd204ea179fdaembedcompiled_en_gb.js”> </script>
+        <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/custom_calendar.css">
     <title>ITC | DMS</title>
 </head>
 
@@ -62,6 +67,16 @@
         $(document).ready(function () {
             $("#main").load("B18411-project-management.html");
         });
+    </script>
+    <script>
+        (function(){
+            var frame = $('iframe'),
+            contents = frame.contents(),
+            styleTag = contents.find('head').append('<style></style>').children('style');
+    
+            styleTag.text(".st-bg {border-left: none;} .st-dtitle {border: none; background: white;}")
+    
+        })();
     </script>
     <!-- End Load Document Scripts -->
 </body>
