@@ -40,6 +40,56 @@
   content: 'View Project';
 }
 
-#user-img{
-    margin: 0 auto;
+#user-img {
+  margin: 0 auto;
+}
+
+/* BUTTON ATTRIBUTES */
+.btn-itc-blue {
+  background-color: #01367a;
+}
+
+.btn-itc-blue:hover {
+  background-color: #01367a;
+}
+
+.btn-itc-blue:enabled {
+  background-color: #01367a;
+}
+
+/* INPUT ATTRIBUTES */
+.input-field input[type=text]:focus+label {
+  color: #01367a !important;
+}
+
+.input-field input[type=email]:focus+label {
+  color: #01367a !important;
+}
+
+.input-field textarea:focus+label {
+  color: #01367a !important;
+}
+
+.input-field option:focus+label {
+  color: #01367a !important;
+}
+
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #01367a !important;
+  box-shadow: 0 1px 0 0 #01367a !important;
+}
+
+.input-field input[type=email]:focus {
+  border-bottom: 1px solid #01367a !important;
+  box-shadow: 0 1px 0 0 #01367a !important;
+}
+
+.input-field textarea:focus {
+  border-bottom: 1px solid #01367a !important;
+  box-shadow: 0 1px 0 0 #01367a !important;
+}
+
+.dropdown-content li>a,
+.dropdown-content li>span {
+  color: black !important;
 }

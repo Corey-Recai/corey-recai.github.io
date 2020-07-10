@@ -4,8 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='lib/main.css' rel='stylesheet' />
-    <script src='lib/main.js'></script>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
@@ -49,18 +47,14 @@
     </ul>
     <!-- End Sidenav -->
     <div id="main" class="main">
-        <section id="info">
-        </section>
-        <section id="schedule-calendar">
-            <div class="row">
-                <div class="col s12 m12 l10 push-l1 center-align">
-                        <div id='loading'>loading...</div>
-                        <div id='calendar'></div>
-                </div>
-            </div>
-        </section>
+
     </div>
-    <script src="calendar.js"></script>
+    <div class="fixed-action-btn horizontal click-to-toggle tooltipped" data-position="left"
+        data-tooltip="Upload a Submittal" onclick="submittalForm();">
+        <a class="btn-floating btn-large btn-itc-blue">
+            <i class="material-icons">add</i>
+        </a>
+    </div>
     <!-- Load Materialize Scripts, Font Awesome and jQuery-->
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
     <!-- Compiled and minified JavaScript -->
@@ -73,8 +67,13 @@
         M.AutoInit();
         // Ajax load main content into page
         $(document).ready(function () {
-            $("#info").load("B18411-project-management.html");
+            $("#main").load("B18411-submittal-table.html");
+            $('select').formSelect();
         });
+
+        function submittalForm (){
+            window.location.href = 'B18411-submittal-form.html';
+        };
     </script>
     <script>
         (function () {

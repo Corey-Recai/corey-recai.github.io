@@ -48,21 +48,9 @@
         </table>
     </div>
 </div>
-<div class="row">
-<div class="container">
-    <div class="divider"></div>
-</div>
-</div>
-<div class="row">
-    <div class="col s12 m12 l10 push-l1">
-            <a class="weatherwidget-io" href="https://forecast7.com/en/40d74n73d94/11101/?unit=us"
-                data-label_1="Academy of American Studies" data-label_2="WEATHER" data-font="Roboto"
-                data-icons="Climacons Animated" data-theme="blank">Academy of American Studies WEATHER</a>
-    </div>
-</div>
-<div class="row">
-<div class="container">
-    <div class="divider"></div>
-</div>
-</div>
-<script src="weather-widget.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('select').formSelect();
+    });
+</script>

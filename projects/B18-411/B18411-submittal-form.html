@@ -1,27 +1,279 @@
-<div class="container">
-    <form id="uploadForm">
-        <div class="form-group">
-            <label> Name : </label>
-            <input class="form-control" required type="text" value="" name="name" id="name">
-        </div>
-        <div class="form-group">
-            <label> Email :</label>
-            <input class="form-control" required type="text" value="" name="email" id="email">
-        </div>
-        <div class="form-group"><label> Contact : </label>
-            <input class="form-control" required type="text" value="" name="contact" id="contact">
-        </div>
-        <div class="form-group"><label> SkillSets :</label>
-            <input class="form-control" required type="text" value="" name="skillsets" id="skillsets">
-        </div>
-        <div class="form-group"><label> LinkedIn Account:</label>
-            <input class="form-control" type="text" value="" name="linkedinUrl" id="linkedinUrl">
-        </div>
-        <div class="form-group">
-            <label> Upload File :</label><input class="form-control" required id="attach" name="attach" type="file"
-                multiple />
-        </div>
+<!DOCTYPE html>
+<html lang="en">
 
-    </form>
-    <input value="Submit" type="button" onclick="submit();" />
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>ITC | DMS</title>
+</head>
+
+<body>
+    <!-- Begin Navbar-->
+    <div class="header">
+        <nav class="grey">
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <!-- navbar content here  -->
+        </nav>
+    </div>
+    <!-- End Navbar-->
+    <!-- Begin Sidenav-->
+    <ul id="slide-out" class="sidenav sidenav-fixed">
+        <li>
+            <h2 class="center-align"><a class="black-text" href="../../index.html">ITC | DMS</a></h2>
+        </li>
+        <li>
+            <div class="user-view center-align">
+                <a href="#user"><img id="user-img" class="circle" src="../../img/user-icon.png"></a>
+                <a href="#name"><span class="black-text name">John Doe</span></a>
+                <a href="#email"><span class="black-text email">someone@gmail.com</span></a>
+            </div>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="waves-effect" href="../B18-411/B18411.html">Home</a></li>
+        <li><a class="waves-effect" href="../B18-411/B18411-submittals.html">Submittals</a></li>
+        <li><a class="waves-effect" href="#">Transmittals</a></li>
+        <li><a class="waves-effect" href="#">Drawings</a></li>
+        <li><a class="waves-effect" href="#">Specifications</a></li>
+        <li><a class="waves-effect" href="#">Schedule</a></li>
+        <li><a class="waves-effect" href="#">RFI's</a></li>
+        <li><a class="waves-effect" href="#">Photos</a></li>
+    </ul>
+    <!-- End Sidenav -->
+    <div id="main" class="main">
+        <div class="row">
+            <div class="col s12 m12 l10 push-l1 center-align">
+                <h5>Academy of American Studies</h5>
+                <h6>
+                    <a href="https://www.google.com/maps?saddr=My+Location&daddr=Academy+of+American+Studies,+28-04+41st+Ave,+Long+Island+City,+NY+11101"
+                        target="_blank">28-04 41st Avenue<br>
+                        Long Island City, NY 11101</a>
+                </h6>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="divider"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="col s12 m12 l10 push-l1">
+                    <form class="contact-form col s12 m12 l12" id="contact-form" name="contact-form" method="POST"
+                        action="https://script.google.com/macros/s/AKfycbxnLk1AevggUoYMRFhLXW_ucbAwFRB0AL9AHSa6tBsYQUHReVrR/exec">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select>
+                                    <option value="" disabled selected>Select a Spec Section</option>
+                                    <option value="03120">03120</option>
+                                    <option value="03200">03200</option>
+                                    <option value="05500">05500</option>
+                                    <option value="07115">07115</option>
+                                    <option value="07150">07150</option>
+                                    <option value="08110">08110</option>
+                                    <option value="08710">08710</option>
+                                    <option value="09900">09900</option>
+                                    <option value="10214">10214</option>
+                                    <option value="11300">11300</option>
+                                    <option value="11400">11400</option>
+                                    <option value="15410">15410</option>
+                                    <option value="15411">15411</option>
+                                    <option value="15412">15412</option>
+                                    <option value="15415">15415</option>
+                                    <option value="15416">15416</option>
+                                    <option value="15417">15417</option>
+                                    <option value="15418">15418</option>
+                                    <option value="15451">15451</option>
+                                    <option value="15453">15453</option>
+                                    <option value="15511">15511</option>
+                                    <option value="15516">15516</option>
+                                    <option value="15555">15555</option>
+                                    <option value="15580">15580</option>
+                                    <option value="15592">15592</option>
+                                    <option value="15596">15596</option>
+                                    <option value="15836">15836</option>
+                                    <option value="15852">15852</option>
+                                    <option value="15860">15860</option>
+                                    <option value="15915">15915</option>
+                                    <option value="15974">15974</option>
+                                    <option value="16720">16720</option>
+                                </select>
+                                <label>Spec Section:</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input id="rev_number" name="rev_number" type="text" class="validate" />
+                                <label for="rev_number">Revision Number:</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select>
+                                    <option value="" disabled selected>Select a Vendor/Subcontractor</option>
+                                    <option value="ITC">ITC</option>
+                                    <option value="1st Heating Solutions">1st Heating Solutions</option>
+                                    <option value="A&L Cesspool">A&L Cesspool</option>
+                                    <option value="AB Environmental">AB Environmental</option>
+                                    <option value="ABC & NY">ABC & NY</option>
+                                    <option value="Able Rigging">Able Rigging</option>
+                                    <option value="Acqua Treat">Acqua Treat</option>
+                                    <option value="ACS">ACS</option>
+                                    <option value="Atco Contracting Group">Atco Contracting Group</option>
+                                    <option value="ATI">ATI</option>
+                                    <option value="B&R">B&R</option>
+                                    <option value="Berco Tank">Berco Tank</option>
+                                    <option value="Big City Boilers">Big City Boilers</option>
+                                    <option value="BRE">BRE</option>
+                                    <option value="Cerco Products">Cerco Products</option>
+                                    <option value="Core Tech">Core Tech</option>
+                                    <option value="Crossroads">Crossroads</option>
+                                    <option value="D&N Services">D&N Services</option>
+                                    <option value="Delta Reliable Cleaning">Delta Reliable Cleaning</option>
+                                    <option value="EAI">EAI</option>
+                                    <option value="EASCO">EASCO</option>
+                                    <option value="First Alert">First Alert</option>
+                                    <option value="GDT">GDT</option>
+                                    <option value="Gregory Reaves">Gregory Reaves</option>
+                                    <option value="H&B Equipment Sales">H&B Equipment Sales</option>
+                                    <option value="High Volt">High Volt</option>
+                                    <option value="Infinity Contracting">Infinity Contracting</option>
+                                    <option value="Island Foundation Corp">Island Foundation Corp</option>
+                                    <option value="J&D Carrying">J&D Carrying</option>
+                                    <option value="Johnson Controls">Johnson Controls</option>
+                                    <option value="Metalline Fire Door Co">Metalline Fire Door Co</option>
+                                    <option value="MLB Door Group">MLB Door Group</option>
+                                    <option value="NK Construction">NK Construction</option>
+                                    <option value="Peak Security">Peak Security</option>
+                                    <option value="Precision General">Precision General</option>
+                                    <option value="Purity Labs">Purity Labs</option>
+                                    <option value="Rockhard Services LLC">Rockhard Services LLC</option>
+                                    <option value="Roebell Painters">Roebell Painters</option>
+                                    <option value="Sam Tell Companies">Sam Tell Companies</option>
+                                    <option value="SPJ Piping">SPJ Piping</option>
+                                    <option value="SRS">SRS</option>
+                                    <option value="Triangle Enterprise">Triangle Enterprise</option>
+                                    <option value="Tristian Contracting">Tristian Contracting</option>
+                                    <option value="Vital Plumbing">Vital Plumbing</option>
+                                </select>
+                                <label>Vendor/Subcontractor:</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">date_range</i>
+                                <input type="text" class="datepicker">
+                                <label>Date Submitted:</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">date_range</i>
+                                <input type="text" class="datepicker">
+                                <label>Date Returned:</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <p>
+                                    <label for="approval_status"><span>Approval Status:</span></label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input type="radio" name="entry.35587303" value="NET / APP" required>
+                                        <span>NET / APP</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input type="radio" name="entry.35587303" value="MCN / AAN" required>
+                                        <span>MCN / AAN</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input type="radio" name="entry.35587303" value="NAT" required>
+                                        <span>NAT</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input type="radio" name="entry.35587303" value="RRS" required>
+                                        <span>RRS</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input type="radio" name="entry.35587303" value="REJ" required>
+                                        <span>REJ</span>
+                                    </label>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <div class="file-field input-field">
+                                    <div class="btn">
+                                        <span>File</span>
+                                        <input type="file" multiple>
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text"
+                                            placeholder="Upload one or more files">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="submit" type="submit" value="Submit" class="btn btn-itc-blue" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Load Materialize Scripts, Font Awesome and jQuery-->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Load Font Awesome -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!-- End Load Materialize Scripts, Font Awesome and jQuery-->
+    <!-- Load Document Scripts -->
+    <script>
+        M.AutoInit();
+        // Ajax load main content into page
+        $(document).ready(function () {
+            $('select').formSelect();
+            $(".datepicker").datepicker({
+                defaultDate: new Date(),
+                setDefaultDate: true,
+                format: "mm/dd/yyyy",
+                autoClose: true,
+                i18n: {
+                    cancel: '',
+                    done: ''
+                },
+            });
+        });
+    </script>
+    <script>
+        (function () {
+            var frame = $('iframe'),
+                contents = frame.contents(),
+                styleTag = contents.find('head').append('<style></style>').children('style');
+
+            styleTag.text(".st-bg {border-left: none;} .st-dtitle {border: none; background: white;}")
+
+        })();
+    </script>
+    <!-- End Load Document Scripts -->
+</body>
+
+</html>
