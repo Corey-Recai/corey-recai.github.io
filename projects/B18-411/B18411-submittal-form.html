@@ -65,11 +65,10 @@
         <div class="row">
             <div class="container">
                 <div class="col s12 m12 l10 push-l1">
-                    <form class="contact-form col s12 m12 l12" id="contact-form" name="contact-form" method="POST"
-                        action="https://script.google.com/macros/s/AKfycbxnLk1AevggUoYMRFhLXW_ucbAwFRB0AL9AHSa6tBsYQUHReVrR/exec">
+                    <form class="col s12 m12 l12" id="submittal-form" name="submittal-form">
                         <div class="row">
-                            <div class="input-field col s12">
-                                <select>
+                            <div class="input-field col s6">
+                                <select id="spec_sec" name="spec_sec">
                                     <option value="" disabled selected>Select a Spec Section</option>
                                     <option value="03120">03120</option>
                                     <option value="03200">03200</option>
@@ -104,16 +103,16 @@
                                     <option value="15974">15974</option>
                                     <option value="16720">16720</option>
                                 </select>
-                                <label>Spec Section:</label>
+                                <label for="spec_sec">Spec Section:</label>
                             </div>
-                            <div class="input-field col s12">
-                                <input id="rev_number" name="rev_number" type="text" class="validate" />
-                                <label for="rev_number">Revision Number:</label>
+                            <div class="input-field col s6">
+                                <input id="rev_num" name="rev_num" type="text" class="validate" />
+                                <label for="rev_num">Revision Number:</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <select>
+                                <select id="vend_sub" name="vend_sub">
                                     <option value="" disabled selected>Select a Vendor/Subcontractor</option>
                                     <option value="ITC">ITC</option>
                                     <option value="1st Heating Solutions">1st Heating Solutions</option>
@@ -160,21 +159,21 @@
                                     <option value="Tristian Contracting">Tristian Contracting</option>
                                     <option value="Vital Plumbing">Vital Plumbing</option>
                                 </select>
-                                <label>Vendor/Subcontractor:</label>
+                                <label for="vend_sub">Vendor/Subcontractor:</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">date_range</i>
-                                <input type="text" class="datepicker">
-                                <label>Date Submitted:</label>
+                                <input id="date_sub" name="date_sub" type="text" class="datepicker">
+                                <label for="date_sub">Date Submitted:</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">date_range</i>
-                                <input type="text" class="datepicker">
-                                <label>Date Returned:</label>
+                                <input id="date_ret" name="date_ret" type="text" class="datepicker">
+                                <label for="date_ret">Date Returned:</label>
                             </div>
                         </div>
                         <div class="row">
@@ -184,31 +183,36 @@
                                 </p>
                                 <p>
                                     <label>
-                                        <input type="radio" name="entry.35587303" value="NET / APP" required>
+                                        <input class="with-gap" type="radio" id="approval_status" name="approval_status" value="NET / APP"
+                                            required>
                                         <span>NET / APP</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input type="radio" name="entry.35587303" value="MCN / AAN" required>
+                                        <input class="with-gap" type="radio" id="approval_status" name="approval_status" value="MCN / AAN"
+                                            required>
                                         <span>MCN / AAN</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input type="radio" name="entry.35587303" value="NAT" required>
+                                        <input class="with-gap" type="radio" id="approval_status" name="approval_status" value="NAT"
+                                            required>
                                         <span>NAT</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input type="radio" name="entry.35587303" value="RRS" required>
+                                        <input class="with-gap" type="radio" id="approval_status" name="approval_status" value="RRS"
+                                            required>
                                         <span>RRS</span>
                                     </label>
                                 </p>
                                 <p>
                                     <label>
-                                        <input type="radio" name="entry.35587303" value="REJ" required>
+                                        <input class="with-gap" type="radio" name="approval_status" value="REJ"
+                                            required>
                                         <span>REJ</span>
                                     </label>
                                 </p>
@@ -217,9 +221,9 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <div class="file-field input-field">
-                                    <div class="btn">
-                                        <span>File</span>
-                                        <input type="file" multiple>
+                                    <div class="btn btn-itc-blue">
+                                        <span><i id="button-text" class="material-icons">file_upload</i> Add file</span>
+                                        <input id="attachment" name="attachment" type="file" multiple>
                                     </div>
                                     <div class="file-path-wrapper">
                                         <input class="file-path validate" type="text"
@@ -230,7 +234,7 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="submit" type="submit" value="Submit" class="btn btn-itc-blue" />
+                                <input id="submit" type="button" value="Submit" class="btn btn-large btn-itc-blue" />
                             </div>
                         </div>
                     </form>
@@ -238,6 +242,7 @@
             </div>
         </div>
     </div>
+    <script src="submittal-upload.js"></script>
     <!-- Load Materialize Scripts, Font Awesome and jQuery-->
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
     <!-- Compiled and minified JavaScript -->

@@ -45,6 +45,11 @@
 }
 
 /* BUTTON ATTRIBUTES */
+#button-text {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
 .btn-itc-blue {
   background-color: #01367a;
 }
@@ -87,6 +92,19 @@
 .input-field textarea:focus {
   border-bottom: 1px solid #01367a !important;
   box-shadow: 0 1px 0 0 #01367a !important;
+}
+
+[type="radio"]:checked + span:before {
+  border: 2px solid #01367a !important;
+}
+
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:after {
+  background-color: #01367a !important;
+}
+
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
+  border: 2px solid #01367a !important;
 }
 
 .dropdown-content li>a,
