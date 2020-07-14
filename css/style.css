@@ -65,6 +65,10 @@
   color: #01367a !important;
 }
 
+input[type=search]:focus + label {
+  color: #01367a !important;
+}
+
 .input-field input[type=email]:focus + label {
   color: #01367a !important;
 }
@@ -78,6 +82,12 @@
 }
 
 .input-field input[type=text]:focus {
+  border-bottom: 1px solid #01367a !important;
+  -webkit-box-shadow: 0 1px 0 0 #01367a !important;
+          box-shadow: 0 1px 0 0 #01367a !important;
+}
+
+input[type=search]:focus {
   border-bottom: 1px solid #01367a !important;
   -webkit-box-shadow: 0 1px 0 0 #01367a !important;
           box-shadow: 0 1px 0 0 #01367a !important;
