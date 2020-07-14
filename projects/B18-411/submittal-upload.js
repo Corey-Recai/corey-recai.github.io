@@ -26,7 +26,7 @@ function submit() {
     // disabling submit button;
     $('input:button').prop('disabled', true);
     let payload = {};
-    $('#submittal-form input, #submittal-form input[name=approval_status]:checked, #submittal-form select').each(function (index) {
+    $('#submittal-form input, #submittal-form select').each(function (index) {
         let propname = $(this).attr('id')
         payload[propname] = $(this).val();
     });

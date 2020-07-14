@@ -178,44 +178,15 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <p>
-                                    <label for="approval_status"><span>Approval Status:</span></label>
-                                </p>
-                                <p>
-                                    <label>
-                                        <input class="with-gap" type="radio" id="approval_status" name="approval_status" value="NET / APP"
-                                            required>
-                                        <span>NET / APP</span>
-                                    </label>
-                                </p>
-                                <p>
-                                    <label>
-                                        <input class="with-gap" type="radio" id="approval_status" name="approval_status" value="MCN / AAN"
-                                            required>
-                                        <span>MCN / AAN</span>
-                                    </label>
-                                </p>
-                                <p>
-                                    <label>
-                                        <input class="with-gap" type="radio" id="approval_status" name="approval_status" value="NAT"
-                                            required>
-                                        <span>NAT</span>
-                                    </label>
-                                </p>
-                                <p>
-                                    <label>
-                                        <input class="with-gap" type="radio" id="approval_status" name="approval_status" value="RRS"
-                                            required>
-                                        <span>RRS</span>
-                                    </label>
-                                </p>
-                                <p>
-                                    <label>
-                                        <input class="with-gap" type="radio" name="approval_status" value="REJ"
-                                            required>
-                                        <span>REJ</span>
-                                    </label>
-                                </p>
+                                <select id="approval_status" name="approval_status">
+                                    <option value="" disabled selected>Select the Approval Status</option>
+                                    <option value="NET / APP">NET / APP - No Exceptions Taken / Approved</option>
+                                    <option value="MCN / AAN">MCN / AAN - Make Changes Noted /  Approved as Noted</option>
+                                    <option value="NAT">NAT - No Action Taken</option>
+                                    <option value="RRS">RRS - Revise and Resubmit</option>
+                                    <option value="REJ">REJ - Rejected</option>
+                                </select>
+                                <label for="approval_status">Approval Status:</label>
                             </div>
                         </div>
                         <div class="row">

@@ -18,37 +18,24 @@
         <table>
             <thead>
                 <tr>
-                    <th>Role</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
+                    <th>Date Uploaded</th>
+                    <th>Spec Section</th>
+                    <th>Revision Number</th>
+                    <th>Vendor / Subcontractor</th>
+                    <th>Date Submitted</th>
+                    <th>Date Returned</th>
+                    <th>Approval Status</th>
+                    <th>Link to Submittal Files</th>
                 </tr>
             </thead>
 
-            <tbody>
-                <tr>
-                    <td>Project Manager</td>
-                    <td>Erika</td>
-                    <td>someone@gmail.com</td>
-                    <td>555-555-5555</td>
-                </tr>
-                <tr>
-                    <td>Site Super</td>
-                    <td>Angel</td>
-                    <td>someone@gmail.com</td>
-                    <td>555-555-5555</td>
-                </tr>
-                <tr>
-                    <td>SCA Project Officer</td>
-                    <td>Paul</td>
-                    <td>someone@gmail.com</td>
-                    <td>555-555-5555</td>
-                </tr>
+            <tbody id="sheet-data">
+            
             </tbody>
         </table>
     </div>
 </div>
-
+<script src="get-submittal-data.js"></script>
 <script>
     $(document).ready(function () {
         $('select').formSelect();
