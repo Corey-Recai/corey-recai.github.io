@@ -8,9 +8,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
-    <title>ITC | DMS</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Academy of American Studies - Submittal Log</title>
 </head>
 
 <body>
@@ -65,7 +65,9 @@
         </div>
         <div class="row">
             <div class="col s12 m12 l10 push-l1">
-                <table id="submittal-table" class="striped">
+                <div class="right" id="tbl-btn-bar"></div>
+                <div class="input-field" id="tbl-srch-bar"></div>
+                <table id="submittal-table" class="highlight">
                     <thead>
                         <tr>
                             <th>Date Uploaded</th>
@@ -101,18 +103,32 @@
     <!-- DataTable plugin -->
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js">
     </script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdn.datatables.net/plug-ins/1.10.21/sorting/datetime-moment.js"></script>
     <!-- Load Document Scripts -->
     <script>
         M.AutoInit();
         // Ajax load main content into page
+
         $(document).ready(function () {
+
             $('table').dataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'excelHtml5',
+                    'csvHtml5'
+                ],
+                "bLengthChange": true,
+                "iDisplayLength": 25,
                 "bServerSide": false,
                 "bProcessing": true,
                 "sAjaxDataProp": "feed.entry",
                 "sAjaxSource": "https://spreadsheets.google.com/feeds/list/18rnRrTB8W1N4UwIPq55zU1ziZU7sZmu0t7p0cS-Nkd0/od6/public/values?alt=json",
                 "aoColumns": [{
-                        "mDataProp": "gsx$timestamp.$t"
+                        "mDataProp": "gsx$timestamp.$t",
+                        "type": "date"
                     },
                     {
                         "mDataProp": "gsx$specsec.$t"
@@ -142,21 +158,34 @@
 
                                 for (var i = 0; i < linksArray.length; i++) {
                                     // Trim the excess whitespace.
-                                    linksArray[i] = ' <a target="_blank" href="' + linksArray[i].replace(/^\s*/, "").replace(
-                                        /\s*$/, "")+'">File '+ x++ +'</a>';
+                                    linksArray[i] = ' <a target="_blank" href="' + linksArray[i]
+                                        .replace(/^\s*/, "").replace(
+                                            /\s*$/, "") + '">File ' + x++ + '</a>';
                                     mDataProp = linksArray;
                                 }
-                                
                             }
                             return mDataProp;
                         }
                     },
-                ]
+                ],
+                initComplete: function () {
+                    $('.buttons-excel').addClass('btn flat btn-itc-blue white-text z-depth-0').html(
+                        '<span><i class="fas fa-file-excel" id="button-text"></i> Excel</span>'
+                    );
+                    $('.buttons-csv').addClass('btn flat btn-itc-blue white-text z-depth-0').html(
+                        '<span><i class="fas fa-file-csv" id="button-text"></i> csv</span>'
+                    );
+                    $('.dt-buttons').appendTo($('#tbl-btn-bar'));
+                   // $('.dataTables_filter').appendTo($('#tbl-srch-bar'));
+                    $('#submittal-table_previous').html(
+                        '<i class="material-icons" id="button-text">navigate_before</i>')
+                    $('#submittal-table_next').html(
+                        '<i class="material-icons" id="button-text">navigate_next</i>')
+                }
+
             });
+
         });
-
-
-
 
         function submittalForm() {
             window.location.href = 'B18411-submittal-form.html';
