@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>ITC | DMS</title>
+</head>
+
+<body>
+    <!-- Begin Navbar-->
+    <div class="header">
+        <nav class="grey">
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <!-- navbar content here  -->
+        </nav>
+    </div>
+    <!-- End Navbar-->
+    <!-- Begin Sidenav-->
+    <ul id="slide-out" class="sidenav sidenav-fixed">
+        <li>
+            <h2 class="center-align"><a class="black-text" href="../../index.html">ITC | DMS</a></h2>
+        </li>
+        <li>
+            <div class="user-view center-align">
+                <a href="#user"><img id="user-img" class="circle" src="../../img/user-icon.png"></a>
+                <a href="#name"><span class="black-text name">John Doe</span></a>
+                <a href="#email"><span class="black-text email">someone@gmail.com</span></a>
+            </div>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="waves-effect" href="../B18-411/B18411.html">Home</a></li>
+        <li><a class="waves-effect" href="../B18-411/B18411-submittals.html">Submittals</a></li>
+        <li><a class="waves-effect" href="#">Transmittals</a></li>
+        <li><a class="waves-effect" href="#">Drawings</a></li>
+        <li><a class="waves-effect" href="#">Specifications</a></li>
+        <li><a class="waves-effect" href="#">Schedule</a></li>
+        <li><a class="waves-effect" href="#">RFI's</a></li>
+        <li><a class="waves-effect" href="#">Photos</a></li>
+    </ul>
+    <!-- End Sidenav -->
+    <div id="main" class="main">
+        <div class="row">
+            <div class="col s12 m12 l10 push-l1 center-align">
+                <h5>Academy of American Studies</h5>
+                <h6>
+                    <a href="https://www.google.com/maps?saddr=My+Location&daddr=Academy+of+American+Studies,+28-04+41st+Ave,+Long+Island+City,+NY+11101"
+                        target="_blank">28-04 41st Avenue<br>
+                        Long Island City, NY 11101</a>
+                </h6>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="divider"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="col s12 m12 l10 push-l1">
+                    <form class="submittal-cover-form col s12 m12 l12 itc-blue" id="submittal-cover-form"
+                        name="submittal-cover-form" method="POST"
+                        action="https://script.google.com/macros/s/AKfycbxnLk1AevggUoYMRFhLXW_ucbAwFRB0AL9AHSa6tBsYQUHReVrR/exec">
+                        <div class="row">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="email" name="email" type="email" class="validate" />
+                                    <label for="email">Date</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input id="first_name" name="first_name" type="text" class="validate" />
+                                    <label for="first_name">To Company</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input id="last_name" name="last_name" type="text" class="validate" />
+                                    <label for="last_name">To Contact</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="subject" name="subject" type="text" class="validate" />
+                                    <label for="subject">Delivery Method</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea id="message" name="message" type="text"
+                                        class="materialize-textarea validate"></textarea>
+                                    <label for="message">Number of Copies</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea id="message" name="message" type="text"
+                                        class="materialize-textarea validate"></textarea>
+                                    <label for="message">Type</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea id="message" name="message" type="text"
+                                        class="materialize-textarea validate"></textarea>
+                                    <label for="message">S</label>
+                                </div>
+                            </div>
+                            <div class="row hide">
+                                <div class="input-field col s12">
+                                    <input id="honeypot" type="text" name="honeypot" value="" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="submit" type="submit" value="Submit" class="btn btn-itc-blue" />
+                                </div>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="submittal-upload.js"></script>
+    <!-- Load Materialize Scripts, Font Awesome and jQuery-->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Load Font Awesome -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!-- End Load Materialize Scripts, Font Awesome and jQuery-->
+    <!-- Load Document Scripts -->
+    <script>
+        M.AutoInit();
+        // Ajax load main content into page
+        $(document).ready(function () {
+            $('select').formSelect();
+            $(".datepicker").datepicker({
+                defaultDate: new Date(),
+                setDefaultDate: true,
+                format: "mm/dd/yyyy",
+                autoClose: true,
+                i18n: {
+                    cancel: '',
+                    done: ''
+                },
+            });
+        });
+    </script>
+    <script>
+        (function () {
+            var frame = $('iframe'),
+                contents = frame.contents(),
+                styleTag = contents.find('head').append('<style></style>').children('style');
+
+            styleTag.text(".st-bg {border-left: none;} .st-dtitle {border: none; background: white;}")
+
+        })();
+    </script>
+    <!-- End Load Document Scripts -->
+</body>
+
+</html>
