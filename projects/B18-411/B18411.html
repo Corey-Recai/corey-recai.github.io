@@ -50,17 +50,87 @@
     <!-- End Sidenav -->
     <div id="main" class="main">
         <section id="info">
+            <div class="row">
+                <div class="col s12 m12 l10 push-l1 center-align">
+                    <h5>Academy of American Studies</h5>
+                    <h6>
+                        <a href="https://www.google.com/maps?saddr=My+Location&daddr=Academy+of+American+Studies,+28-04+41st+Ave,+Long+Island+City,+NY+11101"
+                            target="_blank">28-04 41st Avenue<br>
+                            Long Island City, NY 11101</a>
+                    </h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container">
+                    <div class="divider"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m12 l10 push-l1">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Role</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Project Manager</td>
+                                <td>Erika</td>
+                                <td>someone@gmail.com</td>
+                                <td>555-555-5555</td>
+                            </tr>
+                            <tr>
+                                <td>Site Super</td>
+                                <td>Angel</td>
+                                <td>someone@gmail.com</td>
+                                <td>555-555-5555</td>
+                            </tr>
+                            <tr>
+                                <td>SCA Project Officer</td>
+                                <td>Paul</td>
+                                <td>someone@gmail.com</td>
+                                <td>555-555-5555</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container">
+                    <div class="divider"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m12 l10 push-l1">
+                    <a class="weatherwidget-io" href="https://forecast7.com/en/40d74n73d94/11101/?unit=us"
+                        data-label_1="ACADEMY OF AMERICAN STUDIES" data-label_2="WEATHER" data-font="Roboto"
+                        data-icons="Climacons Animated" data-theme="pure">ACADEMY OF AMERICAN STUDIES WEATHER</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container">
+                    <div class="divider"></div>
+                </div>
+            </div>
         </section>
         <section id="schedule-calendar">
             <div class="row">
                 <div class="col s12 m12 l10 push-l1 center-align">
+                    
                         <div id='loading'>loading...</div>
                         <div id='calendar'></div>
+                    
                 </div>
             </div>
         </section>
     </div>
     <script src="calendar.js"></script>
+    <script src="weather-widget.js"></script>
     <!-- Load Materialize Scripts, Font Awesome and jQuery-->
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
     <!-- Compiled and minified JavaScript -->
@@ -73,19 +143,10 @@
         M.AutoInit();
         // Ajax load main content into page
         $(document).ready(function () {
-            $("#info").load("B18411-project-management.html");
+
         });
     </script>
-    <script>
-        (function () {
-            var frame = $('iframe'),
-                contents = frame.contents(),
-                styleTag = contents.find('head').append('<style></style>').children('style');
 
-            styleTag.text(".st-bg {border-left: none;} .st-dtitle {border: none; background: white;}")
-
-        })();
-    </script>
     <!-- End Load Document Scripts -->
 </body>
 

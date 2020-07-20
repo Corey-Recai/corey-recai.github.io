@@ -9,6 +9,8 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.0.2/css/responsive.bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/materialize-social.css">
     <link rel="stylesheet" href="../../css/style.css">
     <title>Academy of American Studies - Submittal Log</title>
 </head>
@@ -65,33 +67,46 @@
         </div>
         <div class="row">
             <div class="col s12 m12 l10 push-l1">
-                <div class="right" id="tbl-btn-bar"></div>
-                <div class="input-field" id="tbl-srch-bar"></div>
-                <table id="submittal-table" class="highlight">
-                    <thead>
-                        <tr>
-                            <th>Date Uploaded</th>
-                            <th>Spec Section</th>
-                            <th>Revision Number</th>
-                            <th>Vendor / Subcontractor</th>
-                            <th>Date Submitted</th>
-                            <th>Date Returned</th>
-                            <th>Approval Status</th>
-                            <th>Link to Submittal Files</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
+                <div class="row">
+                    <div class="left" id="tbl-btn-bar"></div>
+                </div>
+                <div class="row">
+                    <table id="submittal-table" class="striped">
+                        <thead>
+                            <tr>
+                                <th class="bold">Date Uploaded</th>
+                                <th class="bold">Spec Section</th>
+                                <th class="bold">Revision Number</th>
+                                <th class="bold">Vendor / Subcontractor</th>
+                                <th class="bold">Date Submitted</th>
+                                <th class="bold">Date Returned</th>
+                                <th class="bold">Approval Status</th>
+                                <th class="bold">Link to Submittal Files</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-
     </div>
-    <div class="fixed-action-btn horizontal click-to-toggle tooltipped" data-position="left"
-        data-tooltip="Upload a Submittal" onclick="submittalForm();">
+    <div class="fixed-action-btn horizontal click-to-toggle">
         <a class="btn-floating btn-large btn-itc-blue">
             <i class="material-icons">add</i>
         </a>
+        <ul>
+            <li>
+                <a href="B18411-submittal-form.html" target="_self"
+                    class="waves-effect waves-light btn-floating green tooltipped" data-position="left"
+                    data-tooltip="Upload a Submittal"><i id="button-text" class="material-icons">file_upload</i></a>
+            </li>
+            <li>
+                <a href="B18411-submittal-cover.html" target="_self"
+                    class="waves-effect waves-light btn-floating orange tooltipped" data-position="left"
+                    data-tooltip="Get a Cover Sheet"><i id="button-text" class="material-icons">content_copy</i></a>
+            </li>
+        </ul>
     </div>
     <!-- Load Materialize Scripts, Font Awesome and jQuery-->
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
@@ -106,16 +121,16 @@
     <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-    
+    <script src="https://cdn.datatables.net/rowreorder/1.2.7/js/dataTables.rowReorder.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.5/js/dataTables.responsive.min.js"></script>
     <!-- Load Document Scripts -->
     <script>
         M.AutoInit();
         // Ajax load main content into page
 
         $(document).ready(function () {
-
             $('table').dataTable({
-                responsive: !0,
+                responsive: true,
                 dom: 'Bfrtip',
                 buttons: [
                     'excelHtml5',
@@ -127,6 +142,7 @@
                 "bProcessing": true,
                 "sAjaxDataProp": "feed.entry",
                 "sAjaxSource": "https://spreadsheets.google.com/feeds/list/18rnRrTB8W1N4UwIPq55zU1ziZU7sZmu0t7p0cS-Nkd0/od6/public/values?alt=json",
+
                 "aoColumns": [{
                         "mDataProp": "gsx$timestamp.$t",
                         "type": "date"
@@ -151,6 +167,7 @@
                     },
                     {
                         "mDataProp": "gsx$attachment.$t",
+
                         "render": function (mDataProp, type, row, meta) {
                             if (type === 'display') {
                                 var links = mDataProp;
@@ -162,7 +179,7 @@
                                     linksArray[i] = ' <a target="_blank" href="' + linksArray[i]
                                         .replace(/^\s*/, "").replace(
                                             /\s*$/, "") + '">File ' + x++ + '</a>';
-                                    mDataProp = linksArray;
+                                    mDataProp = linksArray.toString();
                                 }
                             }
                             return mDataProp;
@@ -183,10 +200,13 @@
                     $('#submittal-table_next').html(
                         '<i class="material-icons" id="button-text">navigate_next</i>')
                 }
-
             });
 
+
+
+
         });
+
 
         function submittalForm() {
             window.location.href = 'B18411-submittal-form.html';
