@@ -66,50 +66,218 @@
             <div class="container">
                 <div class="col s12 m12 l10 push-l1">
                     <form class="submittal-cover-form col s12 m12 l12 itc-blue" id="submittal-cover-form"
-                        name="submittal-cover-form" method="POST"
-                        action="https://script.google.com/macros/s/AKfycbxnLk1AevggUoYMRFhLXW_ucbAwFRB0AL9AHSa6tBsYQUHReVrR/exec">
+                        name="submittal-cover-form" method="POST" action="https://script.google.com/macros/s/AKfycbxoPoYCI6-p926jA6j3ZWX3UD1g4D8P4yHsVILmsJSu7m5tkIg/exec">
                         <div class="row">
                             <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="email" name="email" type="email" class="validate" />
-                                    <label for="email">Date</label>
+                                <div class="input-field col s6">
+                                    <input id="date" name="date" type="text" class="datepicker">
+                                    <label for="date">Date</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <select id="delivery_method" name="delivery_method">
+                                        <option value="" disabled selected>Select the Delivery Method</option>
+                                        <option value="Hand Delivery">Hand Delivery</option>
+                                        <option value="E-Mail Delivery">E-Mail Delivery</option>
+                                        <option value="UPS">UPS</option>
+                                        <option value="FedEx">FedEx</option>
+                                    </select>
+                                    <label for="delivery_method">Delivery Method</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s6">
-                                    <input id="first_name" name="first_name" type="text" class="validate" />
-                                    <label for="first_name">To Company</label>
+                                    <select id="to_location" name="to_location">
+                                        <option value="" disabled selected>Select the To Location</option>
+                                        <optgroup label="Frequently Used">
+                                            <option value="SCA">SCA</option>
+                                            <option value="Engineer">Engineer</option>
+                                            <option value="PS 575Q (Academy of American Studies)">PS 575Q (Academy of
+                                                American Studies)</option>
+                                        </optgroup>
+                                        <optgroup label="All Job Companies">
+                                            <option value="1st Heating Solutions">1st Heating Solutions</option>
+                                            <option value="A&L Cesspool">A&L Cesspool</option>
+                                            <option value="AB Environmental">AB Environmental</option>
+                                            <option value="ABC & NY">ABC & NY</option>
+                                            <option value="Able Rigging">Able Rigging</option>
+                                            <option value="Acqua Treat">Acqua Treat</option>
+                                            <option value="ACS">ACS</option>
+                                            <option value="Atco Contracting Group">Atco Contracting Group</option>
+                                            <option value="ATI">ATI</option>
+                                            <option value="B&R">B&R</option>
+                                            <option value="Berco Tank">Berco Tank</option>
+                                            <option value="Big City Boilers">Big City Boilers</option>
+                                            <option value="BRE">BRE</option>
+                                            <option value="Cerco Products">Cerco Products</option>
+                                            <option value="Core Tech">Core Tech</option>
+                                            <option value="Crossroads">Crossroads</option>
+                                            <option value="D&N Services">D&N Services</option>
+                                            <option value="Delta Reliable Cleaning">Delta Reliable Cleaning</option>
+                                            <option value="EAI">EAI</option>
+                                            <option value="EASCO">EASCO</option>
+                                            <option value="First Alert">First Alert</option>
+                                            <option value="GDT">GDT</option>
+                                            <option value="Gregory Reaves">Gregory Reaves</option>
+                                            <option value="H&B Equipment Sales">H&B Equipment Sales</option>
+                                            <option value="High Volt">High Volt</option>
+                                            <option value="Infinity Contracting">Infinity Contracting</option>
+                                            <option value="Island Foundation Corp">Island Foundation Corp</option>
+                                            <option value="J&D Carrying">J&D Carrying</option>
+                                            <option value="Johnson Controls">Johnson Controls</option>
+                                            <option value="Metalline Fire Door Co">Metalline Fire Door Co</option>
+                                            <option value="MLB Door Group">MLB Door Group</option>
+                                            <option value="NK Construction">NK Construction</option>
+                                            <option value="Peak Security">Peak Security</option>
+                                            <option value="Precision General">Precision General</option>
+                                            <option value="Purity Labs">Purity Labs</option>
+                                            <option value="Rockhard Services LLC">Rockhard Services LLC</option>
+                                            <option value="Roebell Painters">Roebell Painters</option>
+                                            <option value="Sam Tell Companies">Sam Tell Companies</option>
+                                            <option value="SPJ Piping">SPJ Piping</option>
+                                            <option value="SRS">SRS</option>
+                                            <option value="Triangle Enterprise">Triangle Enterprise</option>
+                                            <option value="Tristian Contracting">Tristian Contracting</option>
+                                            <option value="Vital Plumbing">Vital Plumbing</option>
+                                        </optgroup>
+                                    </select>
+                                    <label for="to_location">To Location</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <input id="last_name" name="last_name" type="text" class="validate" />
-                                    <label for="last_name">To Contact</label>
+                                    <input id="contact_name" name="contact_name" type="text" class="validate" />
+                                    <label for="contact_name">To Contact</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <select id="num_copies" name="num_copies">
+                                        <option value="" disabled selected>Select the Number of Copies</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                    <label for="num_copies">Number of Copies</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <select id="type" name="type">
+                                        <option value="" disabled selected>Select the Submittal Type</option>
+                                        <option value="PD">Product Data</option>
+                                        <option value="DR">Drawing</option>
+                                        <option value="SM">Sample/Product</option>
+                                    </select>
+                                    <label for="type">Type</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s4">
+                                    <select id="spec_sec" name="spec_sec">
+                                        <option value="" disabled selected>Select a Spec Section</option>
+                                        <option value="03120">03120</option>
+                                        <option value="03200">03200</option>
+                                        <option value="05500">05500</option>
+                                        <option value="07115">07115</option>
+                                        <option value="07150">07150</option>
+                                        <option value="08110">08110</option>
+                                        <option value="08710">08710</option>
+                                        <option value="09900">09900</option>
+                                        <option value="10214">10214</option>
+                                        <option value="11300">11300</option>
+                                        <option value="11400">11400</option>
+                                        <option value="15410">15410</option>
+                                        <option value="15411">15411</option>
+                                        <option value="15412">15412</option>
+                                        <option value="15415">15415</option>
+                                        <option value="15416">15416</option>
+                                        <option value="15417">15417</option>
+                                        <option value="15418">15418</option>
+                                        <option value="15451">15451</option>
+                                        <option value="15453">15453</option>
+                                        <option value="15511">15511</option>
+                                        <option value="15516">15516</option>
+                                        <option value="15555">15555</option>
+                                        <option value="15580">15580</option>
+                                        <option value="15592">15592</option>
+                                        <option value="15596">15596</option>
+                                        <option value="15836">15836</option>
+                                        <option value="15852">15852</option>
+                                        <option value="15860">15860</option>
+                                        <option value="15915">15915</option>
+                                        <option value="15974">15974</option>
+                                        <option value="16720">16720</option>
+                                    </select>
+                                    <label for="spec_sec">Spec Section</label>
+                                </div>
+                                <div class="input-field col s4">
+                                    <input id="rev_num" name="rev_num" type="text" class="validate" />
+                                    <label for="rev_num">Revision Number</label>
+                                </div>
+                                <div class="input-field col s4">
+                                    <input id="sub_num" name="sub_num" type="text" class="validate" />
+                                    <label for="sub_num">Submission Number</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input id="subject" name="subject" type="text" class="validate" />
-                                    <label for="subject">Delivery Method</label>
+                                    <input id="sub_name" name="sub_name" type="text" class="validate" />
+                                    <label for="sub_name">Submittal Name</label>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="input-field col s12">
-                                    <textarea id="message" name="message" type="text"
-                                        class="materialize-textarea validate"></textarea>
-                                    <label for="message">Number of Copies</label>
+                                <div class="input-field col s6">
+                                    <select id="subcontractor" name="subcontractor">
+                                        <option value="" disabled selected>Select a Subcontractor</option>
+                                        <option value="ITC">ITC</option>
+                                        <option value="1st Heating Solutions">1st Heating Solutions</option>
+                                        <option value="A&L Cesspool">A&L Cesspool</option>
+                                        <option value="AB Environmental">AB Environmental</option>
+                                        <option value="ABC & NY">ABC & NY</option>
+                                        <option value="Able Rigging">Able Rigging</option>
+                                        <option value="Acqua Treat">Acqua Treat</option>
+                                        <option value="ACS">ACS</option>
+                                        <option value="Atco Contracting Group">Atco Contracting Group</option>
+                                        <option value="ATI">ATI</option>
+                                        <option value="B&R">B&R</option>
+                                        <option value="Berco Tank">Berco Tank</option>
+                                        <option value="Big City Boilers">Big City Boilers</option>
+                                        <option value="BRE">BRE</option>
+                                        <option value="Cerco Products">Cerco Products</option>
+                                        <option value="Core Tech">Core Tech</option>
+                                        <option value="Crossroads">Crossroads</option>
+                                        <option value="D&N Services">D&N Services</option>
+                                        <option value="Delta Reliable Cleaning">Delta Reliable Cleaning</option>
+                                        <option value="EAI">EAI</option>
+                                        <option value="EASCO">EASCO</option>
+                                        <option value="First Alert">First Alert</option>
+                                        <option value="GDT">GDT</option>
+                                        <option value="Gregory Reaves">Gregory Reaves</option>
+                                        <option value="H&B Equipment Sales">H&B Equipment Sales</option>
+                                        <option value="High Volt">High Volt</option>
+                                        <option value="Infinity Contracting">Infinity Contracting</option>
+                                        <option value="Island Foundation Corp">Island Foundation Corp</option>
+                                        <option value="J&D Carrying">J&D Carrying</option>
+                                        <option value="Johnson Controls">Johnson Controls</option>
+                                        <option value="Metalline Fire Door Co">Metalline Fire Door Co</option>
+                                        <option value="MLB Door Group">MLB Door Group</option>
+                                        <option value="NK Construction">NK Construction</option>
+                                        <option value="Peak Security">Peak Security</option>
+                                        <option value="Precision General">Precision General</option>
+                                        <option value="Purity Labs">Purity Labs</option>
+                                        <option value="Rockhard Services LLC">Rockhard Services LLC</option>
+                                        <option value="Roebell Painters">Roebell Painters</option>
+                                        <option value="Sam Tell Companies">Sam Tell Companies</option>
+                                        <option value="SPJ Piping">SPJ Piping</option>
+                                        <option value="SRS">SRS</option>
+                                        <option value="Triangle Enterprise">Triangle Enterprise</option>
+                                        <option value="Tristian Contracting">Tristian Contracting</option>
+                                        <option value="Vital Plumbing">Vital Plumbing</option>
+                                    </select>
+                                    <label for="subcontractor">Subcontractor</label>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <textarea id="message" name="message" type="text"
-                                        class="materialize-textarea validate"></textarea>
-                                    <label for="message">Type</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <textarea id="message" name="message" type="text"
-                                        class="materialize-textarea validate"></textarea>
-                                    <label for="message">S</label>
+                                <div class="input-field col s6">
+                                    <input id="signed_by" name="signed_by" type="text" class="validate" />
+                                    <label for="signed_by">Signed By</label>
                                 </div>
                             </div>
                             <div class="row hide">
@@ -127,7 +295,7 @@
             </div>
         </div>
     </div>
-    <script src="submittal-upload.js"></script>
+    <script src="cover-sheet.js"></script>
     <!-- Load Materialize Scripts, Font Awesome and jQuery-->
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
     <!-- Compiled and minified JavaScript -->
