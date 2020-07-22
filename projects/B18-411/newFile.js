@@ -34,11 +34,104 @@ function sanitizeInput(rawInput) {
     return placeholder.getContent();
 }
 
-function doPost(e, pdfUrl, docUrl, submittalFileName) {
+function createPDF(e) {
+  try {
+    Logger.log(JSON.stringify(e));
+
+    function pad(num, padlen, padchar) {
+        var pad_char = typeof padchar !== 'undefined' ? padchar : '0';
+        var pad = new Array(1 + padlen).join(pad_char);
+        return (pad + num).slice(-pad.length);
+    }
+
+    function ordinalSuffix(i) {
+        var j = i % 10,
+            k = i % 100;
+        if (j == 1 && k != 11) {
+            return i + "st";
+        }
+        if (j == 2 && k != 12) {
+            return i + "nd";
+        }
+        if (j == 3 && k != 13) {
+            return i + "rd";
+        }
+        return i + "th";
+    }
+
+    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    var now = new Date(e.parameters.date);
+    var stringDate = months[now.getMonth()] + ' ' + now.getDate() + ', ' + now.getFullYear();
+
+    var shortDate = e.parameters.date;
+    var longDate = stringDate;
+    var deliveryMethod = e.parameters.delivery_method;
+    var toLocation = e.parameters.to_location;
+    var toContact = e.parameters.contact_name;
+    var numCopies = e.parameters.num_copies;
+    var type = e.parameters.type;
+    var specSec = e.parameters.spec_sec + "-" + pad(e.parameters.rev_num, 3) + "-" + pad(e.parameters.sub_num, 3);
+    var subName = e.parameters.sub_name;
+    var subcontractor = e.parameters.subcontractor;
+    var signedBy = e.parameters.signed_by;
+    var subNum = ordinalSuffix(e.parameters.sub_num);
+    var submittalFileName = "SPEC#" + specSec + "-" + subName;
+
+    const docFile = DriveApp.getFileById("1tGRvCKUtcsXGrpC35R_JYuDqKb0J7tzQQrKkc-0SqHY");
+    const docFolder = DriveApp.getFolderById("1JxdiAgETWTUjkzMTHfKE-Rb4Lrk2vm8Y");
+    const pdfFolder = DriveApp.getFolderById("1uWBMD_BNWeRR-rBdoqHYq0wWcSMTjRj9");
+
+    var submittalFile = docFile.makeCopy(docFolder).setName(submittalFileName);
+    var submittalDocFile = DocumentApp.openById(submittalFile.getId());
+
+    var body = submittalDocFile.getBody();
+    body.replaceText("{to_company}", toLocation);
+    body.replaceText("{to_contact}", toContact);
+    body.replaceText("{date}", longDate);
+    body.replaceText("{delivery_method}", deliveryMethod);
+    body.replaceText("{num_copies}", numCopies);
+    body.replaceText("{type}", type);
+    body.replaceText("{spec_and_rev_num}", specSec);
+    body.replaceText("{submittal_name}", subName);
+    body.replaceText("{subcontractor}", subcontractor);
+    body.replaceText("{signed_by}", signedBy);
+    body.replaceText("{submission_number}", subNum);
+    body.replaceText("{short_date}", shortDate);
+    submittalDocFile.saveAndClose();
+
+
+    var pdfFileBlob = submittalDocFile.getAs('application/pdf');
+    var submittalPdfFile = pdfFolder.createFile(pdfFileBlob);
+    submittalPdfFile.setName(submittalFileName);
+    var pdfUrl = submittalPdfFile.getUrl();
+    var docUrl = submittalFile.getUrl();
+    
+    var pdfList = [pdfUrl, docUrl, submittalFileName];
+    
+    return pdfList;
+  }catch (error) { // if error return this
+        Logger.log(error);
+        return ContentService
+            .createTextOutput(JSON.stringify({
+                "result": "error",
+                "error": error
+            }))
+            .setMimeType(ContentService.MimeType.JSON);
+    } 
+}
+
+function doPost(e) {
 
     try {
         Logger.log(e); // the Google Script version of console.log see: Class Logger
         record_data(e);
+        //createPDF(e);
+        
+        var createPDFList = createPDF(e);
+        var pdfUrl = createPDFList[0];
+        var docUrl = createPDFList[1];
+        var submittalFileName = createPDFList[2];
+
 
         // shorter name for form data
         var mailData = e.parameters;
@@ -79,82 +172,6 @@ function doPost(e, pdfUrl, docUrl, submittalFileName) {
                 "error": error
             }))
             .setMimeType(ContentService.MimeType.JSON);
-    }
-}
-
-
-function pad(num, padlen, padchar) {
-    var pad_char = typeof padchar !== 'undefined' ? padchar : '0';
-    var pad = new Array(1 + padlen).join(pad_char);
-    return (pad + num).slice(-pad.length);
-}
-
-function ordinalSuffix(i) {
-    var j = i % 10,
-        k = i % 100;
-    if (j == 1 && k != 11) {
-        return i + "st";
-    }
-    if (j == 2 && k != 12) {
-        return i + "nd";
-    }
-    if (j == 3 && k != 13) {
-        return i + "rd";
-    }
-    return i + "th";
-}
-
-function createPDF(e) {
-    try {
-        var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-        var now = new Date(e.parameters.date);
-        var stringDate = months[now.getMonth()] + ' ' + now.getDate() + ', ' + now.getFullYear();
-
-        var shortDate = e.parameters.date;
-        var longDate = stringDate;
-        var deliveryMethod = e.parameters.delivery_method;
-        var toLocation = e.parameters.to_location;
-        var toContact = e.parameters.contact_name;
-        var numCopies = e.parameters.num_copies;
-        var type = e.parameters.type;
-        var specSec = e.parameters.spec_sec + "-" + pad(e.parameters.rev_num, 3) + "-" + pad(e.parameters.sub_num, 3);
-        var subName = e.parameters.sub_name;
-        var subcontractor = e.parameters.subcontractor;
-        var signedBy = e.parameters.signed_by;
-        var subNum = ordinalSuffix(e.paramters.sub_num);
-        var submittalFileName = "SPEC#" + specSec + subName;
-
-        const docFile = DriveApp.getFileById("1tGRvCKUtcsXGrpC35R_JYuDqKb0J7tzQQrKkc-0SqHY");
-        const docFolder = DriveApp.getFolderById("1JxdiAgETWTUjkzMTHfKE-Rb4Lrk2vm8Y");
-        const pdfFolder = DriveApp.getFolderById("1uWBMD_BNWeRR-rBdoqHYq0wWcSMTjRj9");
-
-        var submittalFile = docFile.makeCopy(docFolder).setName(submittalFileName);
-        var submittalDocFile = DocumentApp.openById(submittalFile.getId());
-        
-        var body = submittalDocFile.getBody();
-        body.replaceText("{to_company}", toLocation);
-        body.replaceText("{to_contact}", toContact);
-        body.replaceText("{date}", longDate);
-        body.replaceText("{delivery_method}", deliveryMethod);
-        body.replaceText("{num_copies}", numCopies);
-        body.replaceText("{type}", type);
-        body.replaceText("{spec_and_rev_num}", specSec);
-        body.replaceText("{submittal_name}", subName);
-        body.replaceText("{subcontractor}", subcontractor);
-        body.replaceText("{signed_by}", signedBy);
-        body.replaceText("{submission_number}", subNum);
-        body.replaceText("{short_date}", shortDate);
-        submittalDocFile.saveAndClose();
-
-
-        var pdfFileBlob = submittalDocFile.getAs(MimeType.PDF);
-        var submittalPdfFile = pdfFolder.createFile(pdfFileBlob).setName(submittalFileName);
-        var pdfUrl = submittalPdfFile.getUrl();
-        var docUrl = submittalFile.getUrl();
-    } catch (error) { // if error return this
-        Logger.log(error);
-    } finally {
-        return pdfUrl, docUrl, submittalFileName;
     }
 }
 
