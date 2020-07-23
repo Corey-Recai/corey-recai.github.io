@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
         themeSystem: 'standard',
         displayEventTime: true,
         eventColor: '#F09300',
+        initialView: 'listMonth',
 
 
         // API KEY
