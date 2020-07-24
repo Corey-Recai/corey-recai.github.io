@@ -1,90 +1,90 @@
 function getSubName(s) {
 if (s == '03120') {
-    subName = ;
+    subName = "";
     return subName;
 }
 if (s == '03200') {
-    subName = ;
+    subName = "Concrete Reinforcement";
     return subName;
 }
 if (s == '05500') {
-    subName = ;
+    subName = "Metal Fabrications";
     return subName;
 }
 if (s == '07115') {
-    subName = ;
+    subName = "Sheet Membrane Waterproofing for Foundations";
     return subName;
 }
 if (s == '07150') {
-    subName = ;
+    subName = "";
     return subName;
 }
 if (s == '08110') {
-    subName = ;
+    subName = "Steel Doors and Frames";
     return subName;
 }
 if (s == '08710') {
-    subName = ;
+    subName = "Finish Hardware";
     return subName;
 }
 if (s == '09900') {
-    subName = ;
+    subName = "Painting";
     return subName;
 }
 if (s == '10214') {
-    subName = ;
+    subName = "Sationairy Metal Wall Louvers";
     return subName;
 }
 if (s == '11300') {
-    subName = ;
+    subName = "";
     return subName;
 }
 if (s == '11400') {
-    subName = ;
+    subName = "Food Service Equipment";
     return subName;
 }
 if (s == '15410') {
-    subName = ;
+    subName = "General Provisions for Plumbing and Drainage Work";
     return subName;
 }
 if (s == '15411') {
-    subName = ;
+    subName = "Hangers and Supports";
     return subName;
 }
 if (s == '15412') {
-    subName = ;
+    subName = "Valves";
     return subName;
 }
 if (s == '15415') {
-    subName = ;
+    subName = "Drainage";
     return subName;
 }
 if (s == '15416') {
-    subName = ;
+    subName = "Gas Piping System";
     return subName;
 }
 if (s == '15417') {
-    subName = ;
+    subName = "Cold Water Supply";
     return subName;
 }
 if (s == '15418') {
-    subName = ;
+    subName = "Hot Water Supply";
     return subName;
 }
 if (s == '15451') {
-    subName = ;
+    subName = "Water Heaters";
     return subName;
 }
 if (s == '15453') {
-    subName = ;
+    subName = "Pumping Apparatus and Tanks";
     return subName;
 }
 if (s == '15511') {
-    subName = ;
+    subName = "Valves (HVAC)";
     return subName;
 }
 if (s == '15516') {
-    subName = ;
+    subName = "";
     return subName;
 }
 if (s == '15555') {
